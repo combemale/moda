@@ -9,6 +9,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="software" eType="#//RunningSoftware"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sts" eType="#//STS" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modarelation" upperBound="-1"
+        eType="#//MODARelation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//MODAElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//ModelKind"/>

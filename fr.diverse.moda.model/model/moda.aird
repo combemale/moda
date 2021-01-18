@@ -4,7 +4,7 @@
     <semanticResources>moda.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_BoZl0FmhEeuxz7y5ys_mqg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Bo7KQFmhEeuxz7y5ys_mqg" name="moda" repPath="#_Bo2RwFmhEeuxz7y5ys_mqg" changeId="e320b744-bf7e-4128-a4e6-7fb8e04199a5">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Bo7KQFmhEeuxz7y5ys_mqg" name="moda" repPath="#_Bo2RwFmhEeuxz7y5ys_mqg" changeId="c3bba354-6875-48e2-892a-cebc980a3bb1">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="moda.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -352,6 +352,22 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QsRGRlmkEeuxz7y5ys_mqg" id="(0.5,1.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_QsRGR1mkEeuxz7y5ys_mqg" id="(0.5,0.0)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Fukr0FmzEeuxz7y5ys_mqg" type="4001" element="_Fud-MlmzEeuxz7y5ys_mqg" source="_Do_kkFmhEeuxz7y5ys_mqg" target="_8pyPYFmjEeuxz7y5ys_mqg">
+          <children xmi:type="notation:Node" xmi:id="_FulS4FmzEeuxz7y5ys_mqg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FulS4VmzEeuxz7y5ys_mqg" x="430" y="379"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_FulS4lmzEeuxz7y5ys_mqg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FulS41mzEeuxz7y5ys_mqg" x="50" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_FulS5FmzEeuxz7y5ys_mqg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FulS5VmzEeuxz7y5ys_mqg" x="-39" y="-10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Fukr0VmzEeuxz7y5ys_mqg" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Fukr0lmzEeuxz7y5ys_mqg" fontColor="7490599" fontName=".AppleSystemUIFont" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Fukr01mzEeuxz7y5ys_mqg" points="[-15, -98, -24, -696]$[-15, -142, -24, -740]$[429, -142, 420, -740]$[429, 730, 420, 132]$[1, 730, -8, 132]$[1, 696, -8, 98]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ful58FmzEeuxz7y5ys_mqg" id="(0.635593220338983,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ful58VmzEeuxz7y5ys_mqg" id="(0.576271186440678,0.0)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_BpHXgFmhEeuxz7y5ys_mqg" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -367,7 +383,7 @@
         </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_Doz-YFmhEeuxz7y5ys_mqg" name="MODAModel" tooltipText="" outgoingEdges="_LHc6MFmhEeuxz7y5ys_mqg _MO5qcFmhEeuxz7y5ys_mqg _MlhavFmhEeuxz7y5ys_mqg _M9ZIJlmhEeuxz7y5ys_mqg" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_Doz-YFmhEeuxz7y5ys_mqg" name="MODAModel" tooltipText="" outgoingEdges="_LHc6MFmhEeuxz7y5ys_mqg _MO5qcFmhEeuxz7y5ys_mqg _MlhavFmhEeuxz7y5ys_mqg _M9ZIJlmhEeuxz7y5ys_mqg _Fud-MlmzEeuxz7y5ys_mqg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="moda.ecore#//MODAModel"/>
       <semanticElements xmi:type="ecore:EClass" href="moda.ecore#//MODAModel"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Do1MgFmhEeuxz7y5ys_mqg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
@@ -641,7 +657,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_8ptW4FmjEeuxz7y5ys_mqg" name="MODARelation" tooltipText="" incomingEdges="_DYF6cFmkEeuxz7y5ys_mqg _QsLms1mkEeuxz7y5ys_mqg" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_8ptW4FmjEeuxz7y5ys_mqg" name="MODARelation" tooltipText="" incomingEdges="_DYF6cFmkEeuxz7y5ys_mqg _QsLms1mkEeuxz7y5ys_mqg _Fud-MlmzEeuxz7y5ys_mqg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="moda.ecore#//MODARelation"/>
       <semanticElements xmi:type="ecore:EClass" href="moda.ecore#//MODARelation"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -772,6 +788,19 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Fud-MlmzEeuxz7y5ys_mqg" name="[0..*] modarelation" sourceNode="_Doz-YFmhEeuxz7y5ys_mqg" targetNode="_8ptW4FmjEeuxz7y5ys_mqg">
+      <target xmi:type="ecore:EReference" href="moda.ecore#//MODAModel/modarelation"/>
+      <semanticElements xmi:type="ecore:EReference" href="moda.ecore#//MODAModel/modarelation"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_FuelMFmzEeuxz7y5ys_mqg" description="_LHdhQFmhEeuxz7y5ys_mqg" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_FuelMlmzEeuxz7y5ys_mqg" showIcon="false">
+          <customFeatures>labelSize</customFeatures>
+        </centerLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_FuelMVmzEeuxz7y5ys_mqg" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Bo5VEFmhEeuxz7y5ys_mqg"/>
