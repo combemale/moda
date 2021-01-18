@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="moda" nsURI="http://www.example.org/moda" nsPrefix="moda">
+  <eClassifiers xsi:type="ecore:EClass" name="MODAModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="model" upperBound="-1"
+        eType="#//Model" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" upperBound="-1" eType="#//Data"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="software" eType="#//RunningSoftware"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sts" eType="#//STS" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//MODAElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//ModelKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//MODAElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//DataKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RunningSoftware" eSuperTypes="#//MODAElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="STS" eSuperTypes="#//MODAElement"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="DataKind">
+    <eLiterals name="input"/>
+    <eLiterals name="output" value="1"/>
+    <eLiterals name="external" value="2"/>
+    <eLiterals name="measured" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ModelKind">
+    <eLiterals name="prescriptive"/>
+    <eLiterals name="predictive" value="1"/>
+    <eLiterals name="descriptive" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MODAElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
+        eType="#//MODARelation" eOpposite="#//MODARelation/src"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" upperBound="-1"
+        eType="#//MODARelation" eOpposite="#//MODARelation/tgt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MODARelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="src" eType="#//MODAElement"
+        eOpposite="#//MODAElement/outgoing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tgt" eType="#//MODAElement"
+        eOpposite="#//MODAElement/incoming"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//RelationKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RelationKind">
+    <eLiterals name="generation"/>
+    <eLiterals name="enactment" value="1"/>
+    <eLiterals name="deployment" value="2"/>
+    <eLiterals name="input" value="3"/>
+    <eLiterals name="output" value="4"/>
+    <eLiterals name="measurement" value="5"/>
+    <eLiterals name="otherInterplay" value="6"/>
+    <eLiterals name="generalization" value="7"/>
+    <eLiterals name="preparation" value="8"/>
+    <eLiterals name="analysis" value="9"/>
+  </eClassifiers>
+</ecore:EPackage>

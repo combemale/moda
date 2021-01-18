@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/fr.diverse.moda.model/src-gen" creationIcons="false"
+    editDirectory="/fr.diverse.moda.model.edit/src-gen" editorDirectory="/fr.diverse.moda.model.editor/src-gen"
+    modelPluginID="fr.diverse.moda.model" modelName="Moda" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>moda.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Moda" basePackage="fr.diverse.moda.model" disposableProviderFactory="true"
+      ecorePackage="moda.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="moda.ecore#//DataKind">
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//DataKind/input"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//DataKind/output"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//DataKind/external"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//DataKind/measured"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="moda.ecore#//ModelKind">
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//ModelKind/prescriptive"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//ModelKind/predictive"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//ModelKind/descriptive"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="moda.ecore#//RelationKind">
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//RelationKind/generation"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//RelationKind/enactment"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//RelationKind/deployment"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//RelationKind/input"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//RelationKind/output"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//RelationKind/measurement"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//RelationKind/otherInterplay"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//RelationKind/generalization"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//RelationKind/preparation"/>
+      <genEnumLiterals ecoreEnumLiteral="moda.ecore#//RelationKind/analysis"/>
+    </genEnums>
+    <genClasses ecoreClass="moda.ecore#//MODAModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference moda.ecore#//MODAModel/model"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference moda.ecore#//MODAModel/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference moda.ecore#//MODAModel/software"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference moda.ecore#//MODAModel/sts"/>
+    </genClasses>
+    <genClasses ecoreClass="moda.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute moda.ecore#//Model/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute moda.ecore#//Model/description"/>
+    </genClasses>
+    <genClasses ecoreClass="moda.ecore#//Data">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute moda.ecore#//Data/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute moda.ecore#//Data/description"/>
+    </genClasses>
+    <genClasses ecoreClass="moda.ecore#//RunningSoftware"/>
+    <genClasses ecoreClass="moda.ecore#//STS"/>
+    <genClasses image="false" ecoreClass="moda.ecore#//MODAElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference moda.ecore#//MODAElement/outgoing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference moda.ecore#//MODAElement/incoming"/>
+    </genClasses>
+    <genClasses ecoreClass="moda.ecore#//MODARelation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference moda.ecore#//MODARelation/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference moda.ecore#//MODARelation/tgt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute moda.ecore#//MODARelation/kind"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
