@@ -39,6 +39,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference moda.ecore#//MODAModel/software"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference moda.ecore#//MODAModel/sts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference moda.ecore#//MODAModel/modarelation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute moda.ecore#//MODAModel/name"/>
     </genClasses>
     <genClasses ecoreClass="moda.ecore#//Model">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute moda.ecore#//Model/kind"/>
@@ -53,11 +54,13 @@
     <genClasses image="false" ecoreClass="moda.ecore#//MODAElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference moda.ecore#//MODAElement/outgoing"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference moda.ecore#//MODAElement/incoming"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute moda.ecore#//MODAElement/name"/>
     </genClasses>
     <genClasses ecoreClass="moda.ecore#//MODARelation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference moda.ecore#//MODARelation/src"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference moda.ecore#//MODARelation/tgt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute moda.ecore#//MODARelation/kind"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute moda.ecore#//MODARelation/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

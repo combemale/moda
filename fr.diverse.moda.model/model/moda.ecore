@@ -11,6 +11,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sts" eType="#//STS" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modarelation" upperBound="-1"
         eType="#//MODARelation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//MODAElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//ModelKind"/>
@@ -38,6 +39,7 @@
         eType="#//MODARelation" eOpposite="#//MODARelation/src"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" upperBound="-1"
         eType="#//MODARelation" eOpposite="#//MODARelation/tgt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MODARelation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="src" eType="#//MODAElement"
@@ -45,6 +47,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tgt" eType="#//MODAElement"
         eOpposite="#//MODAElement/incoming"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//RelationKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="RelationKind">
     <eLiterals name="generation"/>
