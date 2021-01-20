@@ -1,7 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: fr.diverse.moda.model
-Bundle-SymbolicName: fr.diverse.moda.model; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.diverse.moda.model;singleton:=true
+Automatic-Module-Name: fr.diverse.moda.model
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: fr.diverse.moda.model.moda,
+ fr.diverse.moda.model.moda.impl,
+ fr.diverse.moda.model.moda.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
