@@ -8,12 +8,8 @@ MODAModel returns MODAModel:
 	{MODAModel}
 	'MODAModel'
 	name=EString
-	'{'
-		('model' '{' model+=Model ( "," model+=Model)* '}' )?
-		('data' '{' data+=Data ( "," data+=Data)* '}' )?
-		('software' software=RunningSoftware)?
-		('sts' sts=STS)?
-		('relation' '{' modarelation+=MODARelation ( "," modarelation+=MODARelation)* '}' )?
+	'{'		
+		(model+=Model ( "," (model+=Model | data+=Data | software=RunningSoftware | sts=STS | modarelation+=MODARelation))* )?
 	'}';
 
 MODAElement returns MODAElement:
@@ -21,20 +17,23 @@ MODAElement returns MODAElement:
 
 Model returns Model:
 	{Model}
-	name=EString (kind=ModelKind) ('"'description=EString'"')?
+	'model' 
+	name=EString (kind=ModelKind) (description=EString)?
 		// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 		// ('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
 	;
 
 Data returns Data:
 	{Data}
-	name=EString (kind=DataKind) ('"'description=EString'"')?
+	'data' 
+	name=EString (kind=DataKind) (description=EString)?
 		//('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 		//('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
 	;
 
 RunningSoftware returns RunningSoftware:
 	{RunningSoftware}
+	'software'
 	name=EString
 		//('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 		//('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
@@ -42,6 +41,7 @@ RunningSoftware returns RunningSoftware:
 
 STS returns STS:
 	{STS}
+	'sts' 
 	name=EString
 		//('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 		//('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
@@ -49,7 +49,8 @@ STS returns STS:
 
 MODARelation returns MODARelation:
 	{MODARelation}
-	name=EString (kind=RelationKind) (src=[MODAElement|EString]) '->' ('tgt' tgt=[MODAElement|EString])
+	'relation' 
+	name=EString (kind=RelationKind) (src=[MODAElement|EString]) '->' (tgt=[MODAElement|EString])
 	;
 
 EString returns ecore::EString:

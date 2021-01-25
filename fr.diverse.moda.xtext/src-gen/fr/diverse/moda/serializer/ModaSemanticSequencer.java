@@ -78,14 +78,7 @@ public class ModaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     MODAModel returns MODAModel
 	 *
 	 * Constraint:
-	 *     (
-	 *         name=EString 
-	 *         (model+=Model model+=Model*)? 
-	 *         (data+=Data data+=Data*)? 
-	 *         software=RunningSoftware? 
-	 *         sts=STS? 
-	 *         (modarelation+=MODARelation modarelation+=MODARelation*)?
-	 *     )
+	 *     (name=EString (model+=Model (model+=Model | data+=Data | software=RunningSoftware | sts=STS | modarelation+=MODARelation)*)?)
 	 */
 	protected void sequence_MODAModel(ISerializationContext context, MODAModel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -111,10 +104,10 @@ public class ModaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModaPackage.Literals.MODA_RELATION__TGT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getMODARelationAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getMODARelationAccess().getKindRelationKindEnumRuleCall_2_0(), semanticObject.getKind());
-		feeder.accept(grammarAccess.getMODARelationAccess().getSrcMODAElementEStringParserRuleCall_3_0_1(), semanticObject.eGet(ModaPackage.Literals.MODA_RELATION__SRC, false));
-		feeder.accept(grammarAccess.getMODARelationAccess().getTgtMODAElementEStringParserRuleCall_5_1_0_1(), semanticObject.eGet(ModaPackage.Literals.MODA_RELATION__TGT, false));
+		feeder.accept(grammarAccess.getMODARelationAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getMODARelationAccess().getKindRelationKindEnumRuleCall_3_0(), semanticObject.getKind());
+		feeder.accept(grammarAccess.getMODARelationAccess().getSrcMODAElementEStringParserRuleCall_4_0_1(), semanticObject.eGet(ModaPackage.Literals.MODA_RELATION__SRC, false));
+		feeder.accept(grammarAccess.getMODARelationAccess().getTgtMODAElementEStringParserRuleCall_6_0_1(), semanticObject.eGet(ModaPackage.Literals.MODA_RELATION__TGT, false));
 		feeder.finish();
 	}
 	
@@ -146,7 +139,7 @@ public class ModaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModaPackage.Literals.MODA_ELEMENT__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRunningSoftwareAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getRunningSoftwareAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -165,7 +158,7 @@ public class ModaSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModaPackage.Literals.MODA_ELEMENT__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSTSAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getSTSAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

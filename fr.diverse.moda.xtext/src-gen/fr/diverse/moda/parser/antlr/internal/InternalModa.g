@@ -112,20 +112,12 @@ ruleMODAModel returns [EObject current=null]
 			newLeafNode(otherlv_3, grammarAccess.getMODAModelAccess().getLeftCurlyBracketKeyword_3());
 		}
 		(
-			otherlv_4='model'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getMODAModelAccess().getModelKeyword_4_0());
-			}
-			otherlv_5='{'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getMODAModelAccess().getLeftCurlyBracketKeyword_4_1());
-			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getMODAModelAccess().getModelModelParserRuleCall_4_2_0());
+						newCompositeNode(grammarAccess.getMODAModelAccess().getModelModelParserRuleCall_4_0_0());
 					}
-					lv_model_6_0=ruleModel
+					lv_model_4_0=ruleModel
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getMODAModelRule());
@@ -133,211 +125,123 @@ ruleMODAModel returns [EObject current=null]
 						add(
 							$current,
 							"model",
-							lv_model_6_0,
+							lv_model_4_0,
 							"fr.diverse.moda.Moda.Model");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_7=','
+				otherlv_5=','
 				{
-					newLeafNode(otherlv_7, grammarAccess.getMODAModelAccess().getCommaKeyword_4_3_0());
+					newLeafNode(otherlv_5, grammarAccess.getMODAModelAccess().getCommaKeyword_4_1_0());
 				}
 				(
 					(
-						{
-							newCompositeNode(grammarAccess.getMODAModelAccess().getModelModelParserRuleCall_4_3_1_0());
-						}
-						lv_model_8_0=ruleModel
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getMODAModelRule());
+						(
+							{
+								newCompositeNode(grammarAccess.getMODAModelAccess().getModelModelParserRuleCall_4_1_1_0_0());
 							}
-							add(
-								$current,
-								"model",
-								lv_model_8_0,
-								"fr.diverse.moda.Moda.Model");
-							afterParserOrEnumRuleCall();
-						}
+							lv_model_6_0=ruleModel
+							{
+								if ($current==null) {
+									$current = createModelElementForParent(grammarAccess.getMODAModelRule());
+								}
+								add(
+									$current,
+									"model",
+									lv_model_6_0,
+									"fr.diverse.moda.Moda.Model");
+								afterParserOrEnumRuleCall();
+							}
+						)
 					)
-				)
-			)*
-			otherlv_9='}'
-			{
-				newLeafNode(otherlv_9, grammarAccess.getMODAModelAccess().getRightCurlyBracketKeyword_4_4());
-			}
-		)?
-		(
-			otherlv_10='data'
-			{
-				newLeafNode(otherlv_10, grammarAccess.getMODAModelAccess().getDataKeyword_5_0());
-			}
-			otherlv_11='{'
-			{
-				newLeafNode(otherlv_11, grammarAccess.getMODAModelAccess().getLeftCurlyBracketKeyword_5_1());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getMODAModelAccess().getDataDataParserRuleCall_5_2_0());
-					}
-					lv_data_12_0=ruleData
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getMODAModelRule());
-						}
-						add(
-							$current,
-							"data",
-							lv_data_12_0,
-							"fr.diverse.moda.Moda.Data");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_13=','
-				{
-					newLeafNode(otherlv_13, grammarAccess.getMODAModelAccess().getCommaKeyword_5_3_0());
-				}
-				(
+					    |
 					(
-						{
-							newCompositeNode(grammarAccess.getMODAModelAccess().getDataDataParserRuleCall_5_3_1_0());
-						}
-						lv_data_14_0=ruleData
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getMODAModelRule());
+						(
+							{
+								newCompositeNode(grammarAccess.getMODAModelAccess().getDataDataParserRuleCall_4_1_1_1_0());
 							}
-							add(
-								$current,
-								"data",
-								lv_data_14_0,
-								"fr.diverse.moda.Moda.Data");
-							afterParserOrEnumRuleCall();
-						}
+							lv_data_7_0=ruleData
+							{
+								if ($current==null) {
+									$current = createModelElementForParent(grammarAccess.getMODAModelRule());
+								}
+								add(
+									$current,
+									"data",
+									lv_data_7_0,
+									"fr.diverse.moda.Moda.Data");
+								afterParserOrEnumRuleCall();
+							}
+						)
 					)
-				)
-			)*
-			otherlv_15='}'
-			{
-				newLeafNode(otherlv_15, grammarAccess.getMODAModelAccess().getRightCurlyBracketKeyword_5_4());
-			}
-		)?
-		(
-			otherlv_16='software'
-			{
-				newLeafNode(otherlv_16, grammarAccess.getMODAModelAccess().getSoftwareKeyword_6_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getMODAModelAccess().getSoftwareRunningSoftwareParserRuleCall_6_1_0());
-					}
-					lv_software_17_0=ruleRunningSoftware
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getMODAModelRule());
-						}
-						set(
-							$current,
-							"software",
-							lv_software_17_0,
-							"fr.diverse.moda.Moda.RunningSoftware");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_18='sts'
-			{
-				newLeafNode(otherlv_18, grammarAccess.getMODAModelAccess().getStsKeyword_7_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getMODAModelAccess().getStsSTSParserRuleCall_7_1_0());
-					}
-					lv_sts_19_0=ruleSTS
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getMODAModelRule());
-						}
-						set(
-							$current,
-							"sts",
-							lv_sts_19_0,
-							"fr.diverse.moda.Moda.STS");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_20='relation'
-			{
-				newLeafNode(otherlv_20, grammarAccess.getMODAModelAccess().getRelationKeyword_8_0());
-			}
-			otherlv_21='{'
-			{
-				newLeafNode(otherlv_21, grammarAccess.getMODAModelAccess().getLeftCurlyBracketKeyword_8_1());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getMODAModelAccess().getModarelationMODARelationParserRuleCall_8_2_0());
-					}
-					lv_modarelation_22_0=ruleMODARelation
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getMODAModelRule());
-						}
-						add(
-							$current,
-							"modarelation",
-							lv_modarelation_22_0,
-							"fr.diverse.moda.Moda.MODARelation");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_23=','
-				{
-					newLeafNode(otherlv_23, grammarAccess.getMODAModelAccess().getCommaKeyword_8_3_0());
-				}
-				(
+					    |
 					(
-						{
-							newCompositeNode(grammarAccess.getMODAModelAccess().getModarelationMODARelationParserRuleCall_8_3_1_0());
-						}
-						lv_modarelation_24_0=ruleMODARelation
-						{
-							if ($current==null) {
-								$current = createModelElementForParent(grammarAccess.getMODAModelRule());
+						(
+							{
+								newCompositeNode(grammarAccess.getMODAModelAccess().getSoftwareRunningSoftwareParserRuleCall_4_1_1_2_0());
 							}
-							add(
-								$current,
-								"modarelation",
-								lv_modarelation_24_0,
-								"fr.diverse.moda.Moda.MODARelation");
-							afterParserOrEnumRuleCall();
-						}
+							lv_software_8_0=ruleRunningSoftware
+							{
+								if ($current==null) {
+									$current = createModelElementForParent(grammarAccess.getMODAModelRule());
+								}
+								set(
+									$current,
+									"software",
+									lv_software_8_0,
+									"fr.diverse.moda.Moda.RunningSoftware");
+								afterParserOrEnumRuleCall();
+							}
+						)
+					)
+					    |
+					(
+						(
+							{
+								newCompositeNode(grammarAccess.getMODAModelAccess().getStsSTSParserRuleCall_4_1_1_3_0());
+							}
+							lv_sts_9_0=ruleSTS
+							{
+								if ($current==null) {
+									$current = createModelElementForParent(grammarAccess.getMODAModelRule());
+								}
+								set(
+									$current,
+									"sts",
+									lv_sts_9_0,
+									"fr.diverse.moda.Moda.STS");
+								afterParserOrEnumRuleCall();
+							}
+						)
+					)
+					    |
+					(
+						(
+							{
+								newCompositeNode(grammarAccess.getMODAModelAccess().getModarelationMODARelationParserRuleCall_4_1_1_4_0());
+							}
+							lv_modarelation_10_0=ruleMODARelation
+							{
+								if ($current==null) {
+									$current = createModelElementForParent(grammarAccess.getMODAModelRule());
+								}
+								add(
+									$current,
+									"modarelation",
+									lv_modarelation_10_0,
+									"fr.diverse.moda.Moda.MODARelation");
+								afterParserOrEnumRuleCall();
+							}
+						)
 					)
 				)
 			)*
-			otherlv_25='}'
-			{
-				newLeafNode(otherlv_25, grammarAccess.getMODAModelAccess().getRightCurlyBracketKeyword_8_4());
-			}
 		)?
-		otherlv_26='}'
+		otherlv_11='}'
 		{
-			newLeafNode(otherlv_26, grammarAccess.getMODAModelAccess().getRightCurlyBracketKeyword_9());
+			newLeafNode(otherlv_11, grammarAccess.getMODAModelAccess().getRightCurlyBracketKeyword_5());
 		}
 	)
 ;
@@ -365,12 +269,16 @@ ruleModel returns [EObject current=null]
 					$current);
 			}
 		)
+		otherlv_1='model'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getModelAccess().getModelKeyword_1());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getNameEStringParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getModelAccess().getNameEStringParserRuleCall_2_0());
 				}
-				lv_name_1_0=ruleEString
+				lv_name_2_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -378,7 +286,7 @@ ruleModel returns [EObject current=null]
 					set(
 						$current,
 						"name",
-						lv_name_1_0,
+						lv_name_2_0,
 						"fr.diverse.moda.Moda.EString");
 					afterParserOrEnumRuleCall();
 				}
@@ -387,9 +295,9 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getKindModelKindEnumRuleCall_2_0());
+					newCompositeNode(grammarAccess.getModelAccess().getKindModelKindEnumRuleCall_3_0());
 				}
-				lv_kind_2_0=ruleModelKind
+				lv_kind_3_0=ruleModelKind
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -397,40 +305,30 @@ ruleModel returns [EObject current=null]
 					set(
 						$current,
 						"kind",
-						lv_kind_2_0,
+						lv_kind_3_0,
 						"fr.diverse.moda.Moda.ModelKind");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_3='"'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getModelAccess().getQuotationMarkKeyword_3_0());
-			}
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getModelAccess().getDescriptionEStringParserRuleCall_3_1_0());
+				{
+					newCompositeNode(grammarAccess.getModelAccess().getDescriptionEStringParserRuleCall_4_0());
+				}
+				lv_description_4_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
-					lv_description_4_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getModelRule());
-						}
-						set(
-							$current,
-							"description",
-							lv_description_4_0,
-							"fr.diverse.moda.Moda.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"description",
+						lv_description_4_0,
+						"fr.diverse.moda.Moda.EString");
+					afterParserOrEnumRuleCall();
+				}
 			)
-			otherlv_5='"'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getModelAccess().getQuotationMarkKeyword_3_2());
-			}
 		)?
 	)
 ;
@@ -458,12 +356,16 @@ ruleData returns [EObject current=null]
 					$current);
 			}
 		)
+		otherlv_1='data'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDataAccess().getDataKeyword_1());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDataAccess().getNameEStringParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDataAccess().getNameEStringParserRuleCall_2_0());
 				}
-				lv_name_1_0=ruleEString
+				lv_name_2_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDataRule());
@@ -471,7 +373,7 @@ ruleData returns [EObject current=null]
 					set(
 						$current,
 						"name",
-						lv_name_1_0,
+						lv_name_2_0,
 						"fr.diverse.moda.Moda.EString");
 					afterParserOrEnumRuleCall();
 				}
@@ -480,9 +382,9 @@ ruleData returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDataAccess().getKindDataKindEnumRuleCall_2_0());
+					newCompositeNode(grammarAccess.getDataAccess().getKindDataKindEnumRuleCall_3_0());
 				}
-				lv_kind_2_0=ruleDataKind
+				lv_kind_3_0=ruleDataKind
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDataRule());
@@ -490,40 +392,30 @@ ruleData returns [EObject current=null]
 					set(
 						$current,
 						"kind",
-						lv_kind_2_0,
+						lv_kind_3_0,
 						"fr.diverse.moda.Moda.DataKind");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_3='"'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getDataAccess().getQuotationMarkKeyword_3_0());
-			}
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getDataAccess().getDescriptionEStringParserRuleCall_3_1_0());
+				{
+					newCompositeNode(grammarAccess.getDataAccess().getDescriptionEStringParserRuleCall_4_0());
+				}
+				lv_description_4_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDataRule());
 					}
-					lv_description_4_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getDataRule());
-						}
-						set(
-							$current,
-							"description",
-							lv_description_4_0,
-							"fr.diverse.moda.Moda.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"description",
+						lv_description_4_0,
+						"fr.diverse.moda.Moda.EString");
+					afterParserOrEnumRuleCall();
+				}
 			)
-			otherlv_5='"'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getDataAccess().getQuotationMarkKeyword_3_2());
-			}
 		)?
 	)
 ;
@@ -551,12 +443,16 @@ ruleRunningSoftware returns [EObject current=null]
 					$current);
 			}
 		)
+		otherlv_1='software'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getRunningSoftwareAccess().getSoftwareKeyword_1());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getRunningSoftwareAccess().getNameEStringParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getRunningSoftwareAccess().getNameEStringParserRuleCall_2_0());
 				}
-				lv_name_1_0=ruleEString
+				lv_name_2_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getRunningSoftwareRule());
@@ -564,7 +460,7 @@ ruleRunningSoftware returns [EObject current=null]
 					set(
 						$current,
 						"name",
-						lv_name_1_0,
+						lv_name_2_0,
 						"fr.diverse.moda.Moda.EString");
 					afterParserOrEnumRuleCall();
 				}
@@ -596,12 +492,16 @@ ruleSTS returns [EObject current=null]
 					$current);
 			}
 		)
+		otherlv_1='sts'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getSTSAccess().getStsKeyword_1());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSTSAccess().getNameEStringParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getSTSAccess().getNameEStringParserRuleCall_2_0());
 				}
-				lv_name_1_0=ruleEString
+				lv_name_2_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getSTSRule());
@@ -609,7 +509,7 @@ ruleSTS returns [EObject current=null]
 					set(
 						$current,
 						"name",
-						lv_name_1_0,
+						lv_name_2_0,
 						"fr.diverse.moda.Moda.EString");
 					afterParserOrEnumRuleCall();
 				}
@@ -641,12 +541,16 @@ ruleMODARelation returns [EObject current=null]
 					$current);
 			}
 		)
+		otherlv_1='relation'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getMODARelationAccess().getRelationKeyword_1());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMODARelationAccess().getNameEStringParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getMODARelationAccess().getNameEStringParserRuleCall_2_0());
 				}
-				lv_name_1_0=ruleEString
+				lv_name_2_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMODARelationRule());
@@ -654,7 +558,7 @@ ruleMODARelation returns [EObject current=null]
 					set(
 						$current,
 						"name",
-						lv_name_1_0,
+						lv_name_2_0,
 						"fr.diverse.moda.Moda.EString");
 					afterParserOrEnumRuleCall();
 				}
@@ -663,9 +567,9 @@ ruleMODARelation returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMODARelationAccess().getKindRelationKindEnumRuleCall_2_0());
+					newCompositeNode(grammarAccess.getMODARelationAccess().getKindRelationKindEnumRuleCall_3_0());
 				}
-				lv_kind_2_0=ruleRelationKind
+				lv_kind_3_0=ruleRelationKind
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMODARelationRule());
@@ -673,7 +577,7 @@ ruleMODARelation returns [EObject current=null]
 					set(
 						$current,
 						"kind",
-						lv_kind_2_0,
+						lv_kind_3_0,
 						"fr.diverse.moda.Moda.RelationKind");
 					afterParserOrEnumRuleCall();
 				}
@@ -687,7 +591,7 @@ ruleMODARelation returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getMODARelationAccess().getSrcMODAElementCrossReference_3_0());
+					newCompositeNode(grammarAccess.getMODARelationAccess().getSrcMODAElementCrossReference_4_0());
 				}
 				ruleEString
 				{
@@ -695,30 +599,24 @@ ruleMODARelation returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_4='->'
+		otherlv_5='->'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getMODARelationAccess().getHyphenMinusGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getMODARelationAccess().getHyphenMinusGreaterThanSignKeyword_5());
 		}
 		(
-			otherlv_5='tgt'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getMODARelationAccess().getTgtKeyword_5_0());
-			}
 			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getMODARelationRule());
-						}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMODARelationRule());
 					}
-					{
-						newCompositeNode(grammarAccess.getMODARelationAccess().getTgtMODAElementCrossReference_5_1_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
+				}
+				{
+					newCompositeNode(grammarAccess.getMODARelationAccess().getTgtMODAElementCrossReference_6_0());
+				}
+				ruleEString
+				{
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
 	)

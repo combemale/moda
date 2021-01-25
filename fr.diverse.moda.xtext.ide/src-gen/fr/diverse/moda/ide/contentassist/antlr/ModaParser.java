@@ -31,6 +31,7 @@ public class ModaParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, ModaGrammarAccess grammarAccess) {
+			builder.put(grammarAccess.getMODAModelAccess().getAlternatives_4_1_1(), "rule__MODAModel__Alternatives_4_1_1");
 			builder.put(grammarAccess.getMODAElementAccess().getAlternatives(), "rule__MODAElement__Alternatives");
 			builder.put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 			builder.put(grammarAccess.getModelKindAccess().getAlternatives(), "rule__ModelKind__Alternatives");
@@ -38,42 +39,31 @@ public class ModaParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getRelationKindAccess().getAlternatives(), "rule__RelationKind__Alternatives");
 			builder.put(grammarAccess.getMODAModelAccess().getGroup(), "rule__MODAModel__Group__0");
 			builder.put(grammarAccess.getMODAModelAccess().getGroup_4(), "rule__MODAModel__Group_4__0");
-			builder.put(grammarAccess.getMODAModelAccess().getGroup_4_3(), "rule__MODAModel__Group_4_3__0");
-			builder.put(grammarAccess.getMODAModelAccess().getGroup_5(), "rule__MODAModel__Group_5__0");
-			builder.put(grammarAccess.getMODAModelAccess().getGroup_5_3(), "rule__MODAModel__Group_5_3__0");
-			builder.put(grammarAccess.getMODAModelAccess().getGroup_6(), "rule__MODAModel__Group_6__0");
-			builder.put(grammarAccess.getMODAModelAccess().getGroup_7(), "rule__MODAModel__Group_7__0");
-			builder.put(grammarAccess.getMODAModelAccess().getGroup_8(), "rule__MODAModel__Group_8__0");
-			builder.put(grammarAccess.getMODAModelAccess().getGroup_8_3(), "rule__MODAModel__Group_8_3__0");
+			builder.put(grammarAccess.getMODAModelAccess().getGroup_4_1(), "rule__MODAModel__Group_4_1__0");
 			builder.put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
-			builder.put(grammarAccess.getModelAccess().getGroup_3(), "rule__Model__Group_3__0");
 			builder.put(grammarAccess.getDataAccess().getGroup(), "rule__Data__Group__0");
-			builder.put(grammarAccess.getDataAccess().getGroup_3(), "rule__Data__Group_3__0");
 			builder.put(grammarAccess.getRunningSoftwareAccess().getGroup(), "rule__RunningSoftware__Group__0");
 			builder.put(grammarAccess.getSTSAccess().getGroup(), "rule__STS__Group__0");
 			builder.put(grammarAccess.getMODARelationAccess().getGroup(), "rule__MODARelation__Group__0");
-			builder.put(grammarAccess.getMODARelationAccess().getGroup_5(), "rule__MODARelation__Group_5__0");
 			builder.put(grammarAccess.getMODAModelAccess().getNameAssignment_2(), "rule__MODAModel__NameAssignment_2");
-			builder.put(grammarAccess.getMODAModelAccess().getModelAssignment_4_2(), "rule__MODAModel__ModelAssignment_4_2");
-			builder.put(grammarAccess.getMODAModelAccess().getModelAssignment_4_3_1(), "rule__MODAModel__ModelAssignment_4_3_1");
-			builder.put(grammarAccess.getMODAModelAccess().getDataAssignment_5_2(), "rule__MODAModel__DataAssignment_5_2");
-			builder.put(grammarAccess.getMODAModelAccess().getDataAssignment_5_3_1(), "rule__MODAModel__DataAssignment_5_3_1");
-			builder.put(grammarAccess.getMODAModelAccess().getSoftwareAssignment_6_1(), "rule__MODAModel__SoftwareAssignment_6_1");
-			builder.put(grammarAccess.getMODAModelAccess().getStsAssignment_7_1(), "rule__MODAModel__StsAssignment_7_1");
-			builder.put(grammarAccess.getMODAModelAccess().getModarelationAssignment_8_2(), "rule__MODAModel__ModarelationAssignment_8_2");
-			builder.put(grammarAccess.getMODAModelAccess().getModarelationAssignment_8_3_1(), "rule__MODAModel__ModarelationAssignment_8_3_1");
-			builder.put(grammarAccess.getModelAccess().getNameAssignment_1(), "rule__Model__NameAssignment_1");
-			builder.put(grammarAccess.getModelAccess().getKindAssignment_2(), "rule__Model__KindAssignment_2");
-			builder.put(grammarAccess.getModelAccess().getDescriptionAssignment_3_1(), "rule__Model__DescriptionAssignment_3_1");
-			builder.put(grammarAccess.getDataAccess().getNameAssignment_1(), "rule__Data__NameAssignment_1");
-			builder.put(grammarAccess.getDataAccess().getKindAssignment_2(), "rule__Data__KindAssignment_2");
-			builder.put(grammarAccess.getDataAccess().getDescriptionAssignment_3_1(), "rule__Data__DescriptionAssignment_3_1");
-			builder.put(grammarAccess.getRunningSoftwareAccess().getNameAssignment_1(), "rule__RunningSoftware__NameAssignment_1");
-			builder.put(grammarAccess.getSTSAccess().getNameAssignment_1(), "rule__STS__NameAssignment_1");
-			builder.put(grammarAccess.getMODARelationAccess().getNameAssignment_1(), "rule__MODARelation__NameAssignment_1");
-			builder.put(grammarAccess.getMODARelationAccess().getKindAssignment_2(), "rule__MODARelation__KindAssignment_2");
-			builder.put(grammarAccess.getMODARelationAccess().getSrcAssignment_3(), "rule__MODARelation__SrcAssignment_3");
-			builder.put(grammarAccess.getMODARelationAccess().getTgtAssignment_5_1(), "rule__MODARelation__TgtAssignment_5_1");
+			builder.put(grammarAccess.getMODAModelAccess().getModelAssignment_4_0(), "rule__MODAModel__ModelAssignment_4_0");
+			builder.put(grammarAccess.getMODAModelAccess().getModelAssignment_4_1_1_0(), "rule__MODAModel__ModelAssignment_4_1_1_0");
+			builder.put(grammarAccess.getMODAModelAccess().getDataAssignment_4_1_1_1(), "rule__MODAModel__DataAssignment_4_1_1_1");
+			builder.put(grammarAccess.getMODAModelAccess().getSoftwareAssignment_4_1_1_2(), "rule__MODAModel__SoftwareAssignment_4_1_1_2");
+			builder.put(grammarAccess.getMODAModelAccess().getStsAssignment_4_1_1_3(), "rule__MODAModel__StsAssignment_4_1_1_3");
+			builder.put(grammarAccess.getMODAModelAccess().getModarelationAssignment_4_1_1_4(), "rule__MODAModel__ModarelationAssignment_4_1_1_4");
+			builder.put(grammarAccess.getModelAccess().getNameAssignment_2(), "rule__Model__NameAssignment_2");
+			builder.put(grammarAccess.getModelAccess().getKindAssignment_3(), "rule__Model__KindAssignment_3");
+			builder.put(grammarAccess.getModelAccess().getDescriptionAssignment_4(), "rule__Model__DescriptionAssignment_4");
+			builder.put(grammarAccess.getDataAccess().getNameAssignment_2(), "rule__Data__NameAssignment_2");
+			builder.put(grammarAccess.getDataAccess().getKindAssignment_3(), "rule__Data__KindAssignment_3");
+			builder.put(grammarAccess.getDataAccess().getDescriptionAssignment_4(), "rule__Data__DescriptionAssignment_4");
+			builder.put(grammarAccess.getRunningSoftwareAccess().getNameAssignment_2(), "rule__RunningSoftware__NameAssignment_2");
+			builder.put(grammarAccess.getSTSAccess().getNameAssignment_2(), "rule__STS__NameAssignment_2");
+			builder.put(grammarAccess.getMODARelationAccess().getNameAssignment_2(), "rule__MODARelation__NameAssignment_2");
+			builder.put(grammarAccess.getMODARelationAccess().getKindAssignment_3(), "rule__MODARelation__KindAssignment_3");
+			builder.put(grammarAccess.getMODARelationAccess().getSrcAssignment_4(), "rule__MODARelation__SrcAssignment_4");
+			builder.put(grammarAccess.getMODARelationAccess().getTgtAssignment_6(), "rule__MODARelation__TgtAssignment_6");
 		}
 	}
 	

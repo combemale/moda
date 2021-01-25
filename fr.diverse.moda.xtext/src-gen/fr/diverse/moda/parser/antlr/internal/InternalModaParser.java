@@ -22,13 +22,12 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalModaParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'MODAModel'", "'{'", "'model'", "','", "'}'", "'data'", "'software'", "'sts'", "'relation'", "'\"'", "'->'", "'tgt'", "'prescriptive'", "'predictive'", "'descriptive'", "'input'", "'output'", "'external'", "'measured'", "'generation'", "'enactment'", "'deployment'", "'measurement'", "'otherInterplay'", "'generalization'", "'preparation'", "'analysis'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'MODAModel'", "'{'", "','", "'}'", "'model'", "'data'", "'software'", "'sts'", "'relation'", "'->'", "'prescriptive'", "'predictive'", "'descriptive'", "'input'", "'output'", "'external'", "'measured'", "'generation'", "'enactment'", "'deployment'", "'measurement'", "'otherInterplay'", "'generalization'", "'preparation'", "'analysis'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
     public static final int T__19=19;
     public static final int T__15=15;
-    public static final int T__37=37;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
@@ -39,7 +38,6 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
     public static final int T__13=13;
     public static final int T__35=35;
     public static final int T__14=14;
-    public static final int T__36=36;
     public static final int EOF=-1;
     public static final int T__30=30;
     public static final int T__31=31;
@@ -136,55 +134,38 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMODAModel"
-    // InternalModa.g:72:1: ruleMODAModel returns [EObject current=null] : ( () otherlv_1= 'MODAModel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'model' otherlv_5= '{' ( (lv_model_6_0= ruleModel ) ) (otherlv_7= ',' ( (lv_model_8_0= ruleModel ) ) )* otherlv_9= '}' )? (otherlv_10= 'data' otherlv_11= '{' ( (lv_data_12_0= ruleData ) ) (otherlv_13= ',' ( (lv_data_14_0= ruleData ) ) )* otherlv_15= '}' )? (otherlv_16= 'software' ( (lv_software_17_0= ruleRunningSoftware ) ) )? (otherlv_18= 'sts' ( (lv_sts_19_0= ruleSTS ) ) )? (otherlv_20= 'relation' otherlv_21= '{' ( (lv_modarelation_22_0= ruleMODARelation ) ) (otherlv_23= ',' ( (lv_modarelation_24_0= ruleMODARelation ) ) )* otherlv_25= '}' )? otherlv_26= '}' ) ;
+    // InternalModa.g:72:1: ruleMODAModel returns [EObject current=null] : ( () otherlv_1= 'MODAModel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_model_4_0= ruleModel ) ) (otherlv_5= ',' ( ( (lv_model_6_0= ruleModel ) ) | ( (lv_data_7_0= ruleData ) ) | ( (lv_software_8_0= ruleRunningSoftware ) ) | ( (lv_sts_9_0= ruleSTS ) ) | ( (lv_modarelation_10_0= ruleMODARelation ) ) ) )* )? otherlv_11= '}' ) ;
     public final EObject ruleMODAModel() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
         Token otherlv_3=null;
-        Token otherlv_4=null;
         Token otherlv_5=null;
-        Token otherlv_7=null;
-        Token otherlv_9=null;
-        Token otherlv_10=null;
         Token otherlv_11=null;
-        Token otherlv_13=null;
-        Token otherlv_15=null;
-        Token otherlv_16=null;
-        Token otherlv_18=null;
-        Token otherlv_20=null;
-        Token otherlv_21=null;
-        Token otherlv_23=null;
-        Token otherlv_25=null;
-        Token otherlv_26=null;
         AntlrDatatypeRuleToken lv_name_2_0 = null;
+
+        EObject lv_model_4_0 = null;
 
         EObject lv_model_6_0 = null;
 
-        EObject lv_model_8_0 = null;
+        EObject lv_data_7_0 = null;
 
-        EObject lv_data_12_0 = null;
+        EObject lv_software_8_0 = null;
 
-        EObject lv_data_14_0 = null;
+        EObject lv_sts_9_0 = null;
 
-        EObject lv_software_17_0 = null;
-
-        EObject lv_sts_19_0 = null;
-
-        EObject lv_modarelation_22_0 = null;
-
-        EObject lv_modarelation_24_0 = null;
+        EObject lv_modarelation_10_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalModa.g:78:2: ( ( () otherlv_1= 'MODAModel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'model' otherlv_5= '{' ( (lv_model_6_0= ruleModel ) ) (otherlv_7= ',' ( (lv_model_8_0= ruleModel ) ) )* otherlv_9= '}' )? (otherlv_10= 'data' otherlv_11= '{' ( (lv_data_12_0= ruleData ) ) (otherlv_13= ',' ( (lv_data_14_0= ruleData ) ) )* otherlv_15= '}' )? (otherlv_16= 'software' ( (lv_software_17_0= ruleRunningSoftware ) ) )? (otherlv_18= 'sts' ( (lv_sts_19_0= ruleSTS ) ) )? (otherlv_20= 'relation' otherlv_21= '{' ( (lv_modarelation_22_0= ruleMODARelation ) ) (otherlv_23= ',' ( (lv_modarelation_24_0= ruleMODARelation ) ) )* otherlv_25= '}' )? otherlv_26= '}' ) )
-            // InternalModa.g:79:2: ( () otherlv_1= 'MODAModel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'model' otherlv_5= '{' ( (lv_model_6_0= ruleModel ) ) (otherlv_7= ',' ( (lv_model_8_0= ruleModel ) ) )* otherlv_9= '}' )? (otherlv_10= 'data' otherlv_11= '{' ( (lv_data_12_0= ruleData ) ) (otherlv_13= ',' ( (lv_data_14_0= ruleData ) ) )* otherlv_15= '}' )? (otherlv_16= 'software' ( (lv_software_17_0= ruleRunningSoftware ) ) )? (otherlv_18= 'sts' ( (lv_sts_19_0= ruleSTS ) ) )? (otherlv_20= 'relation' otherlv_21= '{' ( (lv_modarelation_22_0= ruleMODARelation ) ) (otherlv_23= ',' ( (lv_modarelation_24_0= ruleMODARelation ) ) )* otherlv_25= '}' )? otherlv_26= '}' )
+            // InternalModa.g:78:2: ( ( () otherlv_1= 'MODAModel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_model_4_0= ruleModel ) ) (otherlv_5= ',' ( ( (lv_model_6_0= ruleModel ) ) | ( (lv_data_7_0= ruleData ) ) | ( (lv_software_8_0= ruleRunningSoftware ) ) | ( (lv_sts_9_0= ruleSTS ) ) | ( (lv_modarelation_10_0= ruleMODARelation ) ) ) )* )? otherlv_11= '}' ) )
+            // InternalModa.g:79:2: ( () otherlv_1= 'MODAModel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_model_4_0= ruleModel ) ) (otherlv_5= ',' ( ( (lv_model_6_0= ruleModel ) ) | ( (lv_data_7_0= ruleData ) ) | ( (lv_software_8_0= ruleRunningSoftware ) ) | ( (lv_sts_9_0= ruleSTS ) ) | ( (lv_modarelation_10_0= ruleMODARelation ) ) ) )* )? otherlv_11= '}' )
             {
-            // InternalModa.g:79:2: ( () otherlv_1= 'MODAModel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'model' otherlv_5= '{' ( (lv_model_6_0= ruleModel ) ) (otherlv_7= ',' ( (lv_model_8_0= ruleModel ) ) )* otherlv_9= '}' )? (otherlv_10= 'data' otherlv_11= '{' ( (lv_data_12_0= ruleData ) ) (otherlv_13= ',' ( (lv_data_14_0= ruleData ) ) )* otherlv_15= '}' )? (otherlv_16= 'software' ( (lv_software_17_0= ruleRunningSoftware ) ) )? (otherlv_18= 'sts' ( (lv_sts_19_0= ruleSTS ) ) )? (otherlv_20= 'relation' otherlv_21= '{' ( (lv_modarelation_22_0= ruleMODARelation ) ) (otherlv_23= ',' ( (lv_modarelation_24_0= ruleMODARelation ) ) )* otherlv_25= '}' )? otherlv_26= '}' )
-            // InternalModa.g:80:3: () otherlv_1= 'MODAModel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'model' otherlv_5= '{' ( (lv_model_6_0= ruleModel ) ) (otherlv_7= ',' ( (lv_model_8_0= ruleModel ) ) )* otherlv_9= '}' )? (otherlv_10= 'data' otherlv_11= '{' ( (lv_data_12_0= ruleData ) ) (otherlv_13= ',' ( (lv_data_14_0= ruleData ) ) )* otherlv_15= '}' )? (otherlv_16= 'software' ( (lv_software_17_0= ruleRunningSoftware ) ) )? (otherlv_18= 'sts' ( (lv_sts_19_0= ruleSTS ) ) )? (otherlv_20= 'relation' otherlv_21= '{' ( (lv_modarelation_22_0= ruleMODARelation ) ) (otherlv_23= ',' ( (lv_modarelation_24_0= ruleMODARelation ) ) )* otherlv_25= '}' )? otherlv_26= '}'
+            // InternalModa.g:79:2: ( () otherlv_1= 'MODAModel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_model_4_0= ruleModel ) ) (otherlv_5= ',' ( ( (lv_model_6_0= ruleModel ) ) | ( (lv_data_7_0= ruleData ) ) | ( (lv_software_8_0= ruleRunningSoftware ) ) | ( (lv_sts_9_0= ruleSTS ) ) | ( (lv_modarelation_10_0= ruleMODARelation ) ) ) )* )? otherlv_11= '}' )
+            // InternalModa.g:80:3: () otherlv_1= 'MODAModel' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' ( ( (lv_model_4_0= ruleModel ) ) (otherlv_5= ',' ( ( (lv_model_6_0= ruleModel ) ) | ( (lv_data_7_0= ruleData ) ) | ( (lv_software_8_0= ruleRunningSoftware ) ) | ( (lv_sts_9_0= ruleSTS ) ) | ( (lv_modarelation_10_0= ruleMODARelation ) ) ) )* )? otherlv_11= '}'
             {
             // InternalModa.g:80:3: ()
             // InternalModa.g:81:4: 
@@ -236,36 +217,28 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getMODAModelAccess().getLeftCurlyBracketKeyword_3());
             		
-            // InternalModa.g:114:3: (otherlv_4= 'model' otherlv_5= '{' ( (lv_model_6_0= ruleModel ) ) (otherlv_7= ',' ( (lv_model_8_0= ruleModel ) ) )* otherlv_9= '}' )?
-            int alt2=2;
-            int LA2_0 = input.LA(1);
+            // InternalModa.g:114:3: ( ( (lv_model_4_0= ruleModel ) ) (otherlv_5= ',' ( ( (lv_model_6_0= ruleModel ) ) | ( (lv_data_7_0= ruleData ) ) | ( (lv_software_8_0= ruleRunningSoftware ) ) | ( (lv_sts_9_0= ruleSTS ) ) | ( (lv_modarelation_10_0= ruleMODARelation ) ) ) )* )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA2_0==13) ) {
-                alt2=1;
+            if ( (LA3_0==15) ) {
+                alt3=1;
             }
-            switch (alt2) {
+            switch (alt3) {
                 case 1 :
-                    // InternalModa.g:115:4: otherlv_4= 'model' otherlv_5= '{' ( (lv_model_6_0= ruleModel ) ) (otherlv_7= ',' ( (lv_model_8_0= ruleModel ) ) )* otherlv_9= '}'
+                    // InternalModa.g:115:4: ( (lv_model_4_0= ruleModel ) ) (otherlv_5= ',' ( ( (lv_model_6_0= ruleModel ) ) | ( (lv_data_7_0= ruleData ) ) | ( (lv_software_8_0= ruleRunningSoftware ) ) | ( (lv_sts_9_0= ruleSTS ) ) | ( (lv_modarelation_10_0= ruleMODARelation ) ) ) )*
                     {
-                    otherlv_4=(Token)match(input,13,FOLLOW_4); 
-
-                    				newLeafNode(otherlv_4, grammarAccess.getMODAModelAccess().getModelKeyword_4_0());
-                    			
-                    otherlv_5=(Token)match(input,12,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_5, grammarAccess.getMODAModelAccess().getLeftCurlyBracketKeyword_4_1());
-                    			
-                    // InternalModa.g:123:4: ( (lv_model_6_0= ruleModel ) )
-                    // InternalModa.g:124:5: (lv_model_6_0= ruleModel )
+                    // InternalModa.g:115:4: ( (lv_model_4_0= ruleModel ) )
+                    // InternalModa.g:116:5: (lv_model_4_0= ruleModel )
                     {
-                    // InternalModa.g:124:5: (lv_model_6_0= ruleModel )
-                    // InternalModa.g:125:6: lv_model_6_0= ruleModel
+                    // InternalModa.g:116:5: (lv_model_4_0= ruleModel )
+                    // InternalModa.g:117:6: lv_model_4_0= ruleModel
                     {
 
-                    						newCompositeNode(grammarAccess.getMODAModelAccess().getModelModelParserRuleCall_4_2_0());
+                    						newCompositeNode(grammarAccess.getMODAModelAccess().getModelModelParserRuleCall_4_0_0());
                     					
                     pushFollow(FOLLOW_6);
-                    lv_model_6_0=ruleModel();
+                    lv_model_4_0=ruleModel();
 
                     state._fsp--;
 
@@ -276,7 +249,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     						add(
                     							current,
                     							"model",
-                    							lv_model_6_0,
+                    							lv_model_4_0,
                     							"fr.diverse.moda.Moda.Model");
                     						afterParserOrEnumRuleCall();
                     					
@@ -286,53 +259,246 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalModa.g:142:4: (otherlv_7= ',' ( (lv_model_8_0= ruleModel ) ) )*
-                    loop1:
+                    // InternalModa.g:134:4: (otherlv_5= ',' ( ( (lv_model_6_0= ruleModel ) ) | ( (lv_data_7_0= ruleData ) ) | ( (lv_software_8_0= ruleRunningSoftware ) ) | ( (lv_sts_9_0= ruleSTS ) ) | ( (lv_modarelation_10_0= ruleMODARelation ) ) ) )*
+                    loop2:
                     do {
-                        int alt1=2;
-                        int LA1_0 = input.LA(1);
+                        int alt2=2;
+                        int LA2_0 = input.LA(1);
 
-                        if ( (LA1_0==14) ) {
-                            alt1=1;
+                        if ( (LA2_0==13) ) {
+                            alt2=1;
                         }
 
 
-                        switch (alt1) {
+                        switch (alt2) {
                     	case 1 :
-                    	    // InternalModa.g:143:5: otherlv_7= ',' ( (lv_model_8_0= ruleModel ) )
+                    	    // InternalModa.g:135:5: otherlv_5= ',' ( ( (lv_model_6_0= ruleModel ) ) | ( (lv_data_7_0= ruleData ) ) | ( (lv_software_8_0= ruleRunningSoftware ) ) | ( (lv_sts_9_0= ruleSTS ) ) | ( (lv_modarelation_10_0= ruleMODARelation ) ) )
                     	    {
-                    	    otherlv_7=(Token)match(input,14,FOLLOW_3); 
+                    	    otherlv_5=(Token)match(input,13,FOLLOW_7); 
 
-                    	    					newLeafNode(otherlv_7, grammarAccess.getMODAModelAccess().getCommaKeyword_4_3_0());
+                    	    					newLeafNode(otherlv_5, grammarAccess.getMODAModelAccess().getCommaKeyword_4_1_0());
                     	    				
-                    	    // InternalModa.g:147:5: ( (lv_model_8_0= ruleModel ) )
-                    	    // InternalModa.g:148:6: (lv_model_8_0= ruleModel )
-                    	    {
-                    	    // InternalModa.g:148:6: (lv_model_8_0= ruleModel )
-                    	    // InternalModa.g:149:7: lv_model_8_0= ruleModel
-                    	    {
+                    	    // InternalModa.g:139:5: ( ( (lv_model_6_0= ruleModel ) ) | ( (lv_data_7_0= ruleData ) ) | ( (lv_software_8_0= ruleRunningSoftware ) ) | ( (lv_sts_9_0= ruleSTS ) ) | ( (lv_modarelation_10_0= ruleMODARelation ) ) )
+                    	    int alt1=5;
+                    	    switch ( input.LA(1) ) {
+                    	    case 15:
+                    	        {
+                    	        alt1=1;
+                    	        }
+                    	        break;
+                    	    case 16:
+                    	        {
+                    	        alt1=2;
+                    	        }
+                    	        break;
+                    	    case 17:
+                    	        {
+                    	        alt1=3;
+                    	        }
+                    	        break;
+                    	    case 18:
+                    	        {
+                    	        alt1=4;
+                    	        }
+                    	        break;
+                    	    case 19:
+                    	        {
+                    	        alt1=5;
+                    	        }
+                    	        break;
+                    	    default:
+                    	        NoViableAltException nvae =
+                    	            new NoViableAltException("", 1, 0, input);
 
-                    	    							newCompositeNode(grammarAccess.getMODAModelAccess().getModelModelParserRuleCall_4_3_1_0());
-                    	    						
-                    	    pushFollow(FOLLOW_6);
-                    	    lv_model_8_0=ruleModel();
-
-                    	    state._fsp--;
-
-
-                    	    							if (current==null) {
-                    	    								current = createModelElementForParent(grammarAccess.getMODAModelRule());
-                    	    							}
-                    	    							add(
-                    	    								current,
-                    	    								"model",
-                    	    								lv_model_8_0,
-                    	    								"fr.diverse.moda.Moda.Model");
-                    	    							afterParserOrEnumRuleCall();
-                    	    						
-
+                    	        throw nvae;
                     	    }
 
+                    	    switch (alt1) {
+                    	        case 1 :
+                    	            // InternalModa.g:140:6: ( (lv_model_6_0= ruleModel ) )
+                    	            {
+                    	            // InternalModa.g:140:6: ( (lv_model_6_0= ruleModel ) )
+                    	            // InternalModa.g:141:7: (lv_model_6_0= ruleModel )
+                    	            {
+                    	            // InternalModa.g:141:7: (lv_model_6_0= ruleModel )
+                    	            // InternalModa.g:142:8: lv_model_6_0= ruleModel
+                    	            {
+
+                    	            								newCompositeNode(grammarAccess.getMODAModelAccess().getModelModelParserRuleCall_4_1_1_0_0());
+                    	            							
+                    	            pushFollow(FOLLOW_6);
+                    	            lv_model_6_0=ruleModel();
+
+                    	            state._fsp--;
+
+
+                    	            								if (current==null) {
+                    	            									current = createModelElementForParent(grammarAccess.getMODAModelRule());
+                    	            								}
+                    	            								add(
+                    	            									current,
+                    	            									"model",
+                    	            									lv_model_6_0,
+                    	            									"fr.diverse.moda.Moda.Model");
+                    	            								afterParserOrEnumRuleCall();
+                    	            							
+
+                    	            }
+
+
+                    	            }
+
+
+                    	            }
+                    	            break;
+                    	        case 2 :
+                    	            // InternalModa.g:160:6: ( (lv_data_7_0= ruleData ) )
+                    	            {
+                    	            // InternalModa.g:160:6: ( (lv_data_7_0= ruleData ) )
+                    	            // InternalModa.g:161:7: (lv_data_7_0= ruleData )
+                    	            {
+                    	            // InternalModa.g:161:7: (lv_data_7_0= ruleData )
+                    	            // InternalModa.g:162:8: lv_data_7_0= ruleData
+                    	            {
+
+                    	            								newCompositeNode(grammarAccess.getMODAModelAccess().getDataDataParserRuleCall_4_1_1_1_0());
+                    	            							
+                    	            pushFollow(FOLLOW_6);
+                    	            lv_data_7_0=ruleData();
+
+                    	            state._fsp--;
+
+
+                    	            								if (current==null) {
+                    	            									current = createModelElementForParent(grammarAccess.getMODAModelRule());
+                    	            								}
+                    	            								add(
+                    	            									current,
+                    	            									"data",
+                    	            									lv_data_7_0,
+                    	            									"fr.diverse.moda.Moda.Data");
+                    	            								afterParserOrEnumRuleCall();
+                    	            							
+
+                    	            }
+
+
+                    	            }
+
+
+                    	            }
+                    	            break;
+                    	        case 3 :
+                    	            // InternalModa.g:180:6: ( (lv_software_8_0= ruleRunningSoftware ) )
+                    	            {
+                    	            // InternalModa.g:180:6: ( (lv_software_8_0= ruleRunningSoftware ) )
+                    	            // InternalModa.g:181:7: (lv_software_8_0= ruleRunningSoftware )
+                    	            {
+                    	            // InternalModa.g:181:7: (lv_software_8_0= ruleRunningSoftware )
+                    	            // InternalModa.g:182:8: lv_software_8_0= ruleRunningSoftware
+                    	            {
+
+                    	            								newCompositeNode(grammarAccess.getMODAModelAccess().getSoftwareRunningSoftwareParserRuleCall_4_1_1_2_0());
+                    	            							
+                    	            pushFollow(FOLLOW_6);
+                    	            lv_software_8_0=ruleRunningSoftware();
+
+                    	            state._fsp--;
+
+
+                    	            								if (current==null) {
+                    	            									current = createModelElementForParent(grammarAccess.getMODAModelRule());
+                    	            								}
+                    	            								set(
+                    	            									current,
+                    	            									"software",
+                    	            									lv_software_8_0,
+                    	            									"fr.diverse.moda.Moda.RunningSoftware");
+                    	            								afterParserOrEnumRuleCall();
+                    	            							
+
+                    	            }
+
+
+                    	            }
+
+
+                    	            }
+                    	            break;
+                    	        case 4 :
+                    	            // InternalModa.g:200:6: ( (lv_sts_9_0= ruleSTS ) )
+                    	            {
+                    	            // InternalModa.g:200:6: ( (lv_sts_9_0= ruleSTS ) )
+                    	            // InternalModa.g:201:7: (lv_sts_9_0= ruleSTS )
+                    	            {
+                    	            // InternalModa.g:201:7: (lv_sts_9_0= ruleSTS )
+                    	            // InternalModa.g:202:8: lv_sts_9_0= ruleSTS
+                    	            {
+
+                    	            								newCompositeNode(grammarAccess.getMODAModelAccess().getStsSTSParserRuleCall_4_1_1_3_0());
+                    	            							
+                    	            pushFollow(FOLLOW_6);
+                    	            lv_sts_9_0=ruleSTS();
+
+                    	            state._fsp--;
+
+
+                    	            								if (current==null) {
+                    	            									current = createModelElementForParent(grammarAccess.getMODAModelRule());
+                    	            								}
+                    	            								set(
+                    	            									current,
+                    	            									"sts",
+                    	            									lv_sts_9_0,
+                    	            									"fr.diverse.moda.Moda.STS");
+                    	            								afterParserOrEnumRuleCall();
+                    	            							
+
+                    	            }
+
+
+                    	            }
+
+
+                    	            }
+                    	            break;
+                    	        case 5 :
+                    	            // InternalModa.g:220:6: ( (lv_modarelation_10_0= ruleMODARelation ) )
+                    	            {
+                    	            // InternalModa.g:220:6: ( (lv_modarelation_10_0= ruleMODARelation ) )
+                    	            // InternalModa.g:221:7: (lv_modarelation_10_0= ruleMODARelation )
+                    	            {
+                    	            // InternalModa.g:221:7: (lv_modarelation_10_0= ruleMODARelation )
+                    	            // InternalModa.g:222:8: lv_modarelation_10_0= ruleMODARelation
+                    	            {
+
+                    	            								newCompositeNode(grammarAccess.getMODAModelAccess().getModarelationMODARelationParserRuleCall_4_1_1_4_0());
+                    	            							
+                    	            pushFollow(FOLLOW_6);
+                    	            lv_modarelation_10_0=ruleMODARelation();
+
+                    	            state._fsp--;
+
+
+                    	            								if (current==null) {
+                    	            									current = createModelElementForParent(grammarAccess.getMODAModelRule());
+                    	            								}
+                    	            								add(
+                    	            									current,
+                    	            									"modarelation",
+                    	            									lv_modarelation_10_0,
+                    	            									"fr.diverse.moda.Moda.MODARelation");
+                    	            								afterParserOrEnumRuleCall();
+                    	            							
+
+                    	            }
+
+
+                    	            }
+
+
+                    	            }
+                    	            break;
 
                     	    }
 
@@ -341,365 +507,19 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop1;
+                    	    break loop2;
                         }
                     } while (true);
 
-                    otherlv_9=(Token)match(input,15,FOLLOW_7); 
-
-                    				newLeafNode(otherlv_9, grammarAccess.getMODAModelAccess().getRightCurlyBracketKeyword_4_4());
-                    			
 
                     }
                     break;
 
             }
 
-            // InternalModa.g:172:3: (otherlv_10= 'data' otherlv_11= '{' ( (lv_data_12_0= ruleData ) ) (otherlv_13= ',' ( (lv_data_14_0= ruleData ) ) )* otherlv_15= '}' )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            otherlv_11=(Token)match(input,14,FOLLOW_2); 
 
-            if ( (LA4_0==16) ) {
-                alt4=1;
-            }
-            switch (alt4) {
-                case 1 :
-                    // InternalModa.g:173:4: otherlv_10= 'data' otherlv_11= '{' ( (lv_data_12_0= ruleData ) ) (otherlv_13= ',' ( (lv_data_14_0= ruleData ) ) )* otherlv_15= '}'
-                    {
-                    otherlv_10=(Token)match(input,16,FOLLOW_4); 
-
-                    				newLeafNode(otherlv_10, grammarAccess.getMODAModelAccess().getDataKeyword_5_0());
-                    			
-                    otherlv_11=(Token)match(input,12,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_11, grammarAccess.getMODAModelAccess().getLeftCurlyBracketKeyword_5_1());
-                    			
-                    // InternalModa.g:181:4: ( (lv_data_12_0= ruleData ) )
-                    // InternalModa.g:182:5: (lv_data_12_0= ruleData )
-                    {
-                    // InternalModa.g:182:5: (lv_data_12_0= ruleData )
-                    // InternalModa.g:183:6: lv_data_12_0= ruleData
-                    {
-
-                    						newCompositeNode(grammarAccess.getMODAModelAccess().getDataDataParserRuleCall_5_2_0());
-                    					
-                    pushFollow(FOLLOW_6);
-                    lv_data_12_0=ruleData();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getMODAModelRule());
-                    						}
-                    						add(
-                    							current,
-                    							"data",
-                    							lv_data_12_0,
-                    							"fr.diverse.moda.Moda.Data");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-                    // InternalModa.g:200:4: (otherlv_13= ',' ( (lv_data_14_0= ruleData ) ) )*
-                    loop3:
-                    do {
-                        int alt3=2;
-                        int LA3_0 = input.LA(1);
-
-                        if ( (LA3_0==14) ) {
-                            alt3=1;
-                        }
-
-
-                        switch (alt3) {
-                    	case 1 :
-                    	    // InternalModa.g:201:5: otherlv_13= ',' ( (lv_data_14_0= ruleData ) )
-                    	    {
-                    	    otherlv_13=(Token)match(input,14,FOLLOW_3); 
-
-                    	    					newLeafNode(otherlv_13, grammarAccess.getMODAModelAccess().getCommaKeyword_5_3_0());
-                    	    				
-                    	    // InternalModa.g:205:5: ( (lv_data_14_0= ruleData ) )
-                    	    // InternalModa.g:206:6: (lv_data_14_0= ruleData )
-                    	    {
-                    	    // InternalModa.g:206:6: (lv_data_14_0= ruleData )
-                    	    // InternalModa.g:207:7: lv_data_14_0= ruleData
-                    	    {
-
-                    	    							newCompositeNode(grammarAccess.getMODAModelAccess().getDataDataParserRuleCall_5_3_1_0());
-                    	    						
-                    	    pushFollow(FOLLOW_6);
-                    	    lv_data_14_0=ruleData();
-
-                    	    state._fsp--;
-
-
-                    	    							if (current==null) {
-                    	    								current = createModelElementForParent(grammarAccess.getMODAModelRule());
-                    	    							}
-                    	    							add(
-                    	    								current,
-                    	    								"data",
-                    	    								lv_data_14_0,
-                    	    								"fr.diverse.moda.Moda.Data");
-                    	    							afterParserOrEnumRuleCall();
-                    	    						
-
-                    	    }
-
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop3;
-                        }
-                    } while (true);
-
-                    otherlv_15=(Token)match(input,15,FOLLOW_8); 
-
-                    				newLeafNode(otherlv_15, grammarAccess.getMODAModelAccess().getRightCurlyBracketKeyword_5_4());
-                    			
-
-                    }
-                    break;
-
-            }
-
-            // InternalModa.g:230:3: (otherlv_16= 'software' ( (lv_software_17_0= ruleRunningSoftware ) ) )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( (LA5_0==17) ) {
-                alt5=1;
-            }
-            switch (alt5) {
-                case 1 :
-                    // InternalModa.g:231:4: otherlv_16= 'software' ( (lv_software_17_0= ruleRunningSoftware ) )
-                    {
-                    otherlv_16=(Token)match(input,17,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_16, grammarAccess.getMODAModelAccess().getSoftwareKeyword_6_0());
-                    			
-                    // InternalModa.g:235:4: ( (lv_software_17_0= ruleRunningSoftware ) )
-                    // InternalModa.g:236:5: (lv_software_17_0= ruleRunningSoftware )
-                    {
-                    // InternalModa.g:236:5: (lv_software_17_0= ruleRunningSoftware )
-                    // InternalModa.g:237:6: lv_software_17_0= ruleRunningSoftware
-                    {
-
-                    						newCompositeNode(grammarAccess.getMODAModelAccess().getSoftwareRunningSoftwareParserRuleCall_6_1_0());
-                    					
-                    pushFollow(FOLLOW_9);
-                    lv_software_17_0=ruleRunningSoftware();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getMODAModelRule());
-                    						}
-                    						set(
-                    							current,
-                    							"software",
-                    							lv_software_17_0,
-                    							"fr.diverse.moda.Moda.RunningSoftware");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            // InternalModa.g:255:3: (otherlv_18= 'sts' ( (lv_sts_19_0= ruleSTS ) ) )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
-
-            if ( (LA6_0==18) ) {
-                alt6=1;
-            }
-            switch (alt6) {
-                case 1 :
-                    // InternalModa.g:256:4: otherlv_18= 'sts' ( (lv_sts_19_0= ruleSTS ) )
-                    {
-                    otherlv_18=(Token)match(input,18,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_18, grammarAccess.getMODAModelAccess().getStsKeyword_7_0());
-                    			
-                    // InternalModa.g:260:4: ( (lv_sts_19_0= ruleSTS ) )
-                    // InternalModa.g:261:5: (lv_sts_19_0= ruleSTS )
-                    {
-                    // InternalModa.g:261:5: (lv_sts_19_0= ruleSTS )
-                    // InternalModa.g:262:6: lv_sts_19_0= ruleSTS
-                    {
-
-                    						newCompositeNode(grammarAccess.getMODAModelAccess().getStsSTSParserRuleCall_7_1_0());
-                    					
-                    pushFollow(FOLLOW_10);
-                    lv_sts_19_0=ruleSTS();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getMODAModelRule());
-                    						}
-                    						set(
-                    							current,
-                    							"sts",
-                    							lv_sts_19_0,
-                    							"fr.diverse.moda.Moda.STS");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            // InternalModa.g:280:3: (otherlv_20= 'relation' otherlv_21= '{' ( (lv_modarelation_22_0= ruleMODARelation ) ) (otherlv_23= ',' ( (lv_modarelation_24_0= ruleMODARelation ) ) )* otherlv_25= '}' )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0==19) ) {
-                alt8=1;
-            }
-            switch (alt8) {
-                case 1 :
-                    // InternalModa.g:281:4: otherlv_20= 'relation' otherlv_21= '{' ( (lv_modarelation_22_0= ruleMODARelation ) ) (otherlv_23= ',' ( (lv_modarelation_24_0= ruleMODARelation ) ) )* otherlv_25= '}'
-                    {
-                    otherlv_20=(Token)match(input,19,FOLLOW_4); 
-
-                    				newLeafNode(otherlv_20, grammarAccess.getMODAModelAccess().getRelationKeyword_8_0());
-                    			
-                    otherlv_21=(Token)match(input,12,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_21, grammarAccess.getMODAModelAccess().getLeftCurlyBracketKeyword_8_1());
-                    			
-                    // InternalModa.g:289:4: ( (lv_modarelation_22_0= ruleMODARelation ) )
-                    // InternalModa.g:290:5: (lv_modarelation_22_0= ruleMODARelation )
-                    {
-                    // InternalModa.g:290:5: (lv_modarelation_22_0= ruleMODARelation )
-                    // InternalModa.g:291:6: lv_modarelation_22_0= ruleMODARelation
-                    {
-
-                    						newCompositeNode(grammarAccess.getMODAModelAccess().getModarelationMODARelationParserRuleCall_8_2_0());
-                    					
-                    pushFollow(FOLLOW_6);
-                    lv_modarelation_22_0=ruleMODARelation();
-
-                    state._fsp--;
-
-
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getMODAModelRule());
-                    						}
-                    						add(
-                    							current,
-                    							"modarelation",
-                    							lv_modarelation_22_0,
-                    							"fr.diverse.moda.Moda.MODARelation");
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-                    // InternalModa.g:308:4: (otherlv_23= ',' ( (lv_modarelation_24_0= ruleMODARelation ) ) )*
-                    loop7:
-                    do {
-                        int alt7=2;
-                        int LA7_0 = input.LA(1);
-
-                        if ( (LA7_0==14) ) {
-                            alt7=1;
-                        }
-
-
-                        switch (alt7) {
-                    	case 1 :
-                    	    // InternalModa.g:309:5: otherlv_23= ',' ( (lv_modarelation_24_0= ruleMODARelation ) )
-                    	    {
-                    	    otherlv_23=(Token)match(input,14,FOLLOW_3); 
-
-                    	    					newLeafNode(otherlv_23, grammarAccess.getMODAModelAccess().getCommaKeyword_8_3_0());
-                    	    				
-                    	    // InternalModa.g:313:5: ( (lv_modarelation_24_0= ruleMODARelation ) )
-                    	    // InternalModa.g:314:6: (lv_modarelation_24_0= ruleMODARelation )
-                    	    {
-                    	    // InternalModa.g:314:6: (lv_modarelation_24_0= ruleMODARelation )
-                    	    // InternalModa.g:315:7: lv_modarelation_24_0= ruleMODARelation
-                    	    {
-
-                    	    							newCompositeNode(grammarAccess.getMODAModelAccess().getModarelationMODARelationParserRuleCall_8_3_1_0());
-                    	    						
-                    	    pushFollow(FOLLOW_6);
-                    	    lv_modarelation_24_0=ruleMODARelation();
-
-                    	    state._fsp--;
-
-
-                    	    							if (current==null) {
-                    	    								current = createModelElementForParent(grammarAccess.getMODAModelRule());
-                    	    							}
-                    	    							add(
-                    	    								current,
-                    	    								"modarelation",
-                    	    								lv_modarelation_24_0,
-                    	    								"fr.diverse.moda.Moda.MODARelation");
-                    	    							afterParserOrEnumRuleCall();
-                    	    						
-
-                    	    }
-
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop7;
-                        }
-                    } while (true);
-
-                    otherlv_25=(Token)match(input,15,FOLLOW_11); 
-
-                    				newLeafNode(otherlv_25, grammarAccess.getMODAModelAccess().getRightCurlyBracketKeyword_8_4());
-                    			
-
-                    }
-                    break;
-
-            }
-
-            otherlv_26=(Token)match(input,15,FOLLOW_2); 
-
-            			newLeafNode(otherlv_26, grammarAccess.getMODAModelAccess().getRightCurlyBracketKeyword_9());
+            			newLeafNode(otherlv_11, grammarAccess.getMODAModelAccess().getRightCurlyBracketKeyword_5());
             		
 
             }
@@ -724,7 +544,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleModel"
-    // InternalModa.g:346:1: entryRuleModel returns [EObject current=null] : iv_ruleModel= ruleModel EOF ;
+    // InternalModa.g:250:1: entryRuleModel returns [EObject current=null] : iv_ruleModel= ruleModel EOF ;
     public final EObject entryRuleModel() throws RecognitionException {
         EObject current = null;
 
@@ -732,8 +552,8 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModa.g:346:46: (iv_ruleModel= ruleModel EOF )
-            // InternalModa.g:347:2: iv_ruleModel= ruleModel EOF
+            // InternalModa.g:250:46: (iv_ruleModel= ruleModel EOF )
+            // InternalModa.g:251:2: iv_ruleModel= ruleModel EOF
             {
              newCompositeNode(grammarAccess.getModelRule()); 
             pushFollow(FOLLOW_1);
@@ -760,15 +580,14 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // InternalModa.g:353:1: ruleModel returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleModelKind ) ) (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )? ) ;
+    // InternalModa.g:257:1: ruleModel returns [EObject current=null] : ( () otherlv_1= 'model' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleModelKind ) ) ( (lv_description_4_0= ruleEString ) )? ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_3=null;
-        Token otherlv_5=null;
-        AntlrDatatypeRuleToken lv_name_1_0 = null;
+        Token otherlv_1=null;
+        AntlrDatatypeRuleToken lv_name_2_0 = null;
 
-        Enumerator lv_kind_2_0 = null;
+        Enumerator lv_kind_3_0 = null;
 
         AntlrDatatypeRuleToken lv_description_4_0 = null;
 
@@ -777,14 +596,14 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModa.g:359:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleModelKind ) ) (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )? ) )
-            // InternalModa.g:360:2: ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleModelKind ) ) (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )? )
+            // InternalModa.g:263:2: ( ( () otherlv_1= 'model' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleModelKind ) ) ( (lv_description_4_0= ruleEString ) )? ) )
+            // InternalModa.g:264:2: ( () otherlv_1= 'model' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleModelKind ) ) ( (lv_description_4_0= ruleEString ) )? )
             {
-            // InternalModa.g:360:2: ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleModelKind ) ) (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )? )
-            // InternalModa.g:361:3: () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleModelKind ) ) (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )?
+            // InternalModa.g:264:2: ( () otherlv_1= 'model' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleModelKind ) ) ( (lv_description_4_0= ruleEString ) )? )
+            // InternalModa.g:265:3: () otherlv_1= 'model' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleModelKind ) ) ( (lv_description_4_0= ruleEString ) )?
             {
-            // InternalModa.g:361:3: ()
-            // InternalModa.g:362:4: 
+            // InternalModa.g:265:3: ()
+            // InternalModa.g:266:4: 
             {
 
             				current = forceCreateModelElement(
@@ -794,17 +613,21 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:368:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalModa.g:369:4: (lv_name_1_0= ruleEString )
+            otherlv_1=(Token)match(input,15,FOLLOW_3); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getModelAccess().getModelKeyword_1());
+            		
+            // InternalModa.g:276:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalModa.g:277:4: (lv_name_2_0= ruleEString )
             {
-            // InternalModa.g:369:4: (lv_name_1_0= ruleEString )
-            // InternalModa.g:370:5: lv_name_1_0= ruleEString
+            // InternalModa.g:277:4: (lv_name_2_0= ruleEString )
+            // InternalModa.g:278:5: lv_name_2_0= ruleEString
             {
 
-            					newCompositeNode(grammarAccess.getModelAccess().getNameEStringParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getModelAccess().getNameEStringParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_12);
-            lv_name_1_0=ruleEString();
+            pushFollow(FOLLOW_8);
+            lv_name_2_0=ruleEString();
 
             state._fsp--;
 
@@ -815,7 +638,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"name",
-            						lv_name_1_0,
+            						lv_name_2_0,
             						"fr.diverse.moda.Moda.EString");
             					afterParserOrEnumRuleCall();
             				
@@ -825,17 +648,17 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:387:3: ( (lv_kind_2_0= ruleModelKind ) )
-            // InternalModa.g:388:4: (lv_kind_2_0= ruleModelKind )
+            // InternalModa.g:295:3: ( (lv_kind_3_0= ruleModelKind ) )
+            // InternalModa.g:296:4: (lv_kind_3_0= ruleModelKind )
             {
-            // InternalModa.g:388:4: (lv_kind_2_0= ruleModelKind )
-            // InternalModa.g:389:5: lv_kind_2_0= ruleModelKind
+            // InternalModa.g:296:4: (lv_kind_3_0= ruleModelKind )
+            // InternalModa.g:297:5: lv_kind_3_0= ruleModelKind
             {
 
-            					newCompositeNode(grammarAccess.getModelAccess().getKindModelKindEnumRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getModelAccess().getKindModelKindEnumRuleCall_3_0());
             				
-            pushFollow(FOLLOW_13);
-            lv_kind_2_0=ruleModelKind();
+            pushFollow(FOLLOW_9);
+            lv_kind_3_0=ruleModelKind();
 
             state._fsp--;
 
@@ -846,7 +669,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"kind",
-            						lv_kind_2_0,
+            						lv_kind_3_0,
             						"fr.diverse.moda.Moda.ModelKind");
             					afterParserOrEnumRuleCall();
             				
@@ -856,56 +679,42 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:406:3: (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // InternalModa.g:314:3: ( (lv_description_4_0= ruleEString ) )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA9_0==20) ) {
-                alt9=1;
+            if ( ((LA4_0>=RULE_STRING && LA4_0<=RULE_ID)) ) {
+                alt4=1;
             }
-            switch (alt9) {
+            switch (alt4) {
                 case 1 :
-                    // InternalModa.g:407:4: otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"'
+                    // InternalModa.g:315:4: (lv_description_4_0= ruleEString )
                     {
-                    otherlv_3=(Token)match(input,20,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_3, grammarAccess.getModelAccess().getQuotationMarkKeyword_3_0());
-                    			
-                    // InternalModa.g:411:4: ( (lv_description_4_0= ruleEString ) )
-                    // InternalModa.g:412:5: (lv_description_4_0= ruleEString )
-                    {
-                    // InternalModa.g:412:5: (lv_description_4_0= ruleEString )
-                    // InternalModa.g:413:6: lv_description_4_0= ruleEString
+                    // InternalModa.g:315:4: (lv_description_4_0= ruleEString )
+                    // InternalModa.g:316:5: lv_description_4_0= ruleEString
                     {
 
-                    						newCompositeNode(grammarAccess.getModelAccess().getDescriptionEStringParserRuleCall_3_1_0());
-                    					
-                    pushFollow(FOLLOW_14);
+                    					newCompositeNode(grammarAccess.getModelAccess().getDescriptionEStringParserRuleCall_4_0());
+                    				
+                    pushFollow(FOLLOW_2);
                     lv_description_4_0=ruleEString();
 
                     state._fsp--;
 
 
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getModelRule());
-                    						}
-                    						set(
-                    							current,
-                    							"description",
-                    							lv_description_4_0,
-                    							"fr.diverse.moda.Moda.EString");
-                    						afterParserOrEnumRuleCall();
-                    					
+                    					if (current==null) {
+                    						current = createModelElementForParent(grammarAccess.getModelRule());
+                    					}
+                    					set(
+                    						current,
+                    						"description",
+                    						lv_description_4_0,
+                    						"fr.diverse.moda.Moda.EString");
+                    					afterParserOrEnumRuleCall();
+                    				
 
                     }
 
-
-                    }
-
-                    otherlv_5=(Token)match(input,20,FOLLOW_2); 
-
-                    				newLeafNode(otherlv_5, grammarAccess.getModelAccess().getQuotationMarkKeyword_3_2());
-                    			
 
                     }
                     break;
@@ -935,7 +744,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleData"
-    // InternalModa.g:439:1: entryRuleData returns [EObject current=null] : iv_ruleData= ruleData EOF ;
+    // InternalModa.g:337:1: entryRuleData returns [EObject current=null] : iv_ruleData= ruleData EOF ;
     public final EObject entryRuleData() throws RecognitionException {
         EObject current = null;
 
@@ -943,8 +752,8 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModa.g:439:45: (iv_ruleData= ruleData EOF )
-            // InternalModa.g:440:2: iv_ruleData= ruleData EOF
+            // InternalModa.g:337:45: (iv_ruleData= ruleData EOF )
+            // InternalModa.g:338:2: iv_ruleData= ruleData EOF
             {
              newCompositeNode(grammarAccess.getDataRule()); 
             pushFollow(FOLLOW_1);
@@ -971,15 +780,14 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleData"
-    // InternalModa.g:446:1: ruleData returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleDataKind ) ) (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )? ) ;
+    // InternalModa.g:344:1: ruleData returns [EObject current=null] : ( () otherlv_1= 'data' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleDataKind ) ) ( (lv_description_4_0= ruleEString ) )? ) ;
     public final EObject ruleData() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_3=null;
-        Token otherlv_5=null;
-        AntlrDatatypeRuleToken lv_name_1_0 = null;
+        Token otherlv_1=null;
+        AntlrDatatypeRuleToken lv_name_2_0 = null;
 
-        Enumerator lv_kind_2_0 = null;
+        Enumerator lv_kind_3_0 = null;
 
         AntlrDatatypeRuleToken lv_description_4_0 = null;
 
@@ -988,14 +796,14 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModa.g:452:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleDataKind ) ) (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )? ) )
-            // InternalModa.g:453:2: ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleDataKind ) ) (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )? )
+            // InternalModa.g:350:2: ( ( () otherlv_1= 'data' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleDataKind ) ) ( (lv_description_4_0= ruleEString ) )? ) )
+            // InternalModa.g:351:2: ( () otherlv_1= 'data' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleDataKind ) ) ( (lv_description_4_0= ruleEString ) )? )
             {
-            // InternalModa.g:453:2: ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleDataKind ) ) (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )? )
-            // InternalModa.g:454:3: () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleDataKind ) ) (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )?
+            // InternalModa.g:351:2: ( () otherlv_1= 'data' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleDataKind ) ) ( (lv_description_4_0= ruleEString ) )? )
+            // InternalModa.g:352:3: () otherlv_1= 'data' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleDataKind ) ) ( (lv_description_4_0= ruleEString ) )?
             {
-            // InternalModa.g:454:3: ()
-            // InternalModa.g:455:4: 
+            // InternalModa.g:352:3: ()
+            // InternalModa.g:353:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1005,17 +813,21 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:461:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalModa.g:462:4: (lv_name_1_0= ruleEString )
+            otherlv_1=(Token)match(input,16,FOLLOW_3); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getDataAccess().getDataKeyword_1());
+            		
+            // InternalModa.g:363:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalModa.g:364:4: (lv_name_2_0= ruleEString )
             {
-            // InternalModa.g:462:4: (lv_name_1_0= ruleEString )
-            // InternalModa.g:463:5: lv_name_1_0= ruleEString
+            // InternalModa.g:364:4: (lv_name_2_0= ruleEString )
+            // InternalModa.g:365:5: lv_name_2_0= ruleEString
             {
 
-            					newCompositeNode(grammarAccess.getDataAccess().getNameEStringParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getDataAccess().getNameEStringParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_15);
-            lv_name_1_0=ruleEString();
+            pushFollow(FOLLOW_10);
+            lv_name_2_0=ruleEString();
 
             state._fsp--;
 
@@ -1026,7 +838,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"name",
-            						lv_name_1_0,
+            						lv_name_2_0,
             						"fr.diverse.moda.Moda.EString");
             					afterParserOrEnumRuleCall();
             				
@@ -1036,17 +848,17 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:480:3: ( (lv_kind_2_0= ruleDataKind ) )
-            // InternalModa.g:481:4: (lv_kind_2_0= ruleDataKind )
+            // InternalModa.g:382:3: ( (lv_kind_3_0= ruleDataKind ) )
+            // InternalModa.g:383:4: (lv_kind_3_0= ruleDataKind )
             {
-            // InternalModa.g:481:4: (lv_kind_2_0= ruleDataKind )
-            // InternalModa.g:482:5: lv_kind_2_0= ruleDataKind
+            // InternalModa.g:383:4: (lv_kind_3_0= ruleDataKind )
+            // InternalModa.g:384:5: lv_kind_3_0= ruleDataKind
             {
 
-            					newCompositeNode(grammarAccess.getDataAccess().getKindDataKindEnumRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getDataAccess().getKindDataKindEnumRuleCall_3_0());
             				
-            pushFollow(FOLLOW_13);
-            lv_kind_2_0=ruleDataKind();
+            pushFollow(FOLLOW_9);
+            lv_kind_3_0=ruleDataKind();
 
             state._fsp--;
 
@@ -1057,7 +869,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"kind",
-            						lv_kind_2_0,
+            						lv_kind_3_0,
             						"fr.diverse.moda.Moda.DataKind");
             					afterParserOrEnumRuleCall();
             				
@@ -1067,56 +879,42 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:499:3: (otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"' )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // InternalModa.g:401:3: ( (lv_description_4_0= ruleEString ) )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA10_0==20) ) {
-                alt10=1;
+            if ( ((LA5_0>=RULE_STRING && LA5_0<=RULE_ID)) ) {
+                alt5=1;
             }
-            switch (alt10) {
+            switch (alt5) {
                 case 1 :
-                    // InternalModa.g:500:4: otherlv_3= '\"' ( (lv_description_4_0= ruleEString ) ) otherlv_5= '\"'
+                    // InternalModa.g:402:4: (lv_description_4_0= ruleEString )
                     {
-                    otherlv_3=(Token)match(input,20,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_3, grammarAccess.getDataAccess().getQuotationMarkKeyword_3_0());
-                    			
-                    // InternalModa.g:504:4: ( (lv_description_4_0= ruleEString ) )
-                    // InternalModa.g:505:5: (lv_description_4_0= ruleEString )
-                    {
-                    // InternalModa.g:505:5: (lv_description_4_0= ruleEString )
-                    // InternalModa.g:506:6: lv_description_4_0= ruleEString
+                    // InternalModa.g:402:4: (lv_description_4_0= ruleEString )
+                    // InternalModa.g:403:5: lv_description_4_0= ruleEString
                     {
 
-                    						newCompositeNode(grammarAccess.getDataAccess().getDescriptionEStringParserRuleCall_3_1_0());
-                    					
-                    pushFollow(FOLLOW_14);
+                    					newCompositeNode(grammarAccess.getDataAccess().getDescriptionEStringParserRuleCall_4_0());
+                    				
+                    pushFollow(FOLLOW_2);
                     lv_description_4_0=ruleEString();
 
                     state._fsp--;
 
 
-                    						if (current==null) {
-                    							current = createModelElementForParent(grammarAccess.getDataRule());
-                    						}
-                    						set(
-                    							current,
-                    							"description",
-                    							lv_description_4_0,
-                    							"fr.diverse.moda.Moda.EString");
-                    						afterParserOrEnumRuleCall();
-                    					
+                    					if (current==null) {
+                    						current = createModelElementForParent(grammarAccess.getDataRule());
+                    					}
+                    					set(
+                    						current,
+                    						"description",
+                    						lv_description_4_0,
+                    						"fr.diverse.moda.Moda.EString");
+                    					afterParserOrEnumRuleCall();
+                    				
 
                     }
 
-
-                    }
-
-                    otherlv_5=(Token)match(input,20,FOLLOW_2); 
-
-                    				newLeafNode(otherlv_5, grammarAccess.getDataAccess().getQuotationMarkKeyword_3_2());
-                    			
 
                     }
                     break;
@@ -1146,7 +944,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRunningSoftware"
-    // InternalModa.g:532:1: entryRuleRunningSoftware returns [EObject current=null] : iv_ruleRunningSoftware= ruleRunningSoftware EOF ;
+    // InternalModa.g:424:1: entryRuleRunningSoftware returns [EObject current=null] : iv_ruleRunningSoftware= ruleRunningSoftware EOF ;
     public final EObject entryRuleRunningSoftware() throws RecognitionException {
         EObject current = null;
 
@@ -1154,8 +952,8 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModa.g:532:56: (iv_ruleRunningSoftware= ruleRunningSoftware EOF )
-            // InternalModa.g:533:2: iv_ruleRunningSoftware= ruleRunningSoftware EOF
+            // InternalModa.g:424:56: (iv_ruleRunningSoftware= ruleRunningSoftware EOF )
+            // InternalModa.g:425:2: iv_ruleRunningSoftware= ruleRunningSoftware EOF
             {
              newCompositeNode(grammarAccess.getRunningSoftwareRule()); 
             pushFollow(FOLLOW_1);
@@ -1182,25 +980,26 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRunningSoftware"
-    // InternalModa.g:539:1: ruleRunningSoftware returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ) ;
+    // InternalModa.g:431:1: ruleRunningSoftware returns [EObject current=null] : ( () otherlv_1= 'software' ( (lv_name_2_0= ruleEString ) ) ) ;
     public final EObject ruleRunningSoftware() throws RecognitionException {
         EObject current = null;
 
-        AntlrDatatypeRuleToken lv_name_1_0 = null;
+        Token otherlv_1=null;
+        AntlrDatatypeRuleToken lv_name_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalModa.g:545:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ) )
-            // InternalModa.g:546:2: ( () ( (lv_name_1_0= ruleEString ) ) )
+            // InternalModa.g:437:2: ( ( () otherlv_1= 'software' ( (lv_name_2_0= ruleEString ) ) ) )
+            // InternalModa.g:438:2: ( () otherlv_1= 'software' ( (lv_name_2_0= ruleEString ) ) )
             {
-            // InternalModa.g:546:2: ( () ( (lv_name_1_0= ruleEString ) ) )
-            // InternalModa.g:547:3: () ( (lv_name_1_0= ruleEString ) )
+            // InternalModa.g:438:2: ( () otherlv_1= 'software' ( (lv_name_2_0= ruleEString ) ) )
+            // InternalModa.g:439:3: () otherlv_1= 'software' ( (lv_name_2_0= ruleEString ) )
             {
-            // InternalModa.g:547:3: ()
-            // InternalModa.g:548:4: 
+            // InternalModa.g:439:3: ()
+            // InternalModa.g:440:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1210,17 +1009,21 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:554:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalModa.g:555:4: (lv_name_1_0= ruleEString )
+            otherlv_1=(Token)match(input,17,FOLLOW_3); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getRunningSoftwareAccess().getSoftwareKeyword_1());
+            		
+            // InternalModa.g:450:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalModa.g:451:4: (lv_name_2_0= ruleEString )
             {
-            // InternalModa.g:555:4: (lv_name_1_0= ruleEString )
-            // InternalModa.g:556:5: lv_name_1_0= ruleEString
+            // InternalModa.g:451:4: (lv_name_2_0= ruleEString )
+            // InternalModa.g:452:5: lv_name_2_0= ruleEString
             {
 
-            					newCompositeNode(grammarAccess.getRunningSoftwareAccess().getNameEStringParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getRunningSoftwareAccess().getNameEStringParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_2);
-            lv_name_1_0=ruleEString();
+            lv_name_2_0=ruleEString();
 
             state._fsp--;
 
@@ -1231,7 +1034,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"name",
-            						lv_name_1_0,
+            						lv_name_2_0,
             						"fr.diverse.moda.Moda.EString");
             					afterParserOrEnumRuleCall();
             				
@@ -1264,7 +1067,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSTS"
-    // InternalModa.g:577:1: entryRuleSTS returns [EObject current=null] : iv_ruleSTS= ruleSTS EOF ;
+    // InternalModa.g:473:1: entryRuleSTS returns [EObject current=null] : iv_ruleSTS= ruleSTS EOF ;
     public final EObject entryRuleSTS() throws RecognitionException {
         EObject current = null;
 
@@ -1272,8 +1075,8 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModa.g:577:44: (iv_ruleSTS= ruleSTS EOF )
-            // InternalModa.g:578:2: iv_ruleSTS= ruleSTS EOF
+            // InternalModa.g:473:44: (iv_ruleSTS= ruleSTS EOF )
+            // InternalModa.g:474:2: iv_ruleSTS= ruleSTS EOF
             {
              newCompositeNode(grammarAccess.getSTSRule()); 
             pushFollow(FOLLOW_1);
@@ -1300,25 +1103,26 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSTS"
-    // InternalModa.g:584:1: ruleSTS returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ) ;
+    // InternalModa.g:480:1: ruleSTS returns [EObject current=null] : ( () otherlv_1= 'sts' ( (lv_name_2_0= ruleEString ) ) ) ;
     public final EObject ruleSTS() throws RecognitionException {
         EObject current = null;
 
-        AntlrDatatypeRuleToken lv_name_1_0 = null;
+        Token otherlv_1=null;
+        AntlrDatatypeRuleToken lv_name_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalModa.g:590:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ) )
-            // InternalModa.g:591:2: ( () ( (lv_name_1_0= ruleEString ) ) )
+            // InternalModa.g:486:2: ( ( () otherlv_1= 'sts' ( (lv_name_2_0= ruleEString ) ) ) )
+            // InternalModa.g:487:2: ( () otherlv_1= 'sts' ( (lv_name_2_0= ruleEString ) ) )
             {
-            // InternalModa.g:591:2: ( () ( (lv_name_1_0= ruleEString ) ) )
-            // InternalModa.g:592:3: () ( (lv_name_1_0= ruleEString ) )
+            // InternalModa.g:487:2: ( () otherlv_1= 'sts' ( (lv_name_2_0= ruleEString ) ) )
+            // InternalModa.g:488:3: () otherlv_1= 'sts' ( (lv_name_2_0= ruleEString ) )
             {
-            // InternalModa.g:592:3: ()
-            // InternalModa.g:593:4: 
+            // InternalModa.g:488:3: ()
+            // InternalModa.g:489:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1328,17 +1132,21 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:599:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalModa.g:600:4: (lv_name_1_0= ruleEString )
+            otherlv_1=(Token)match(input,18,FOLLOW_3); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getSTSAccess().getStsKeyword_1());
+            		
+            // InternalModa.g:499:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalModa.g:500:4: (lv_name_2_0= ruleEString )
             {
-            // InternalModa.g:600:4: (lv_name_1_0= ruleEString )
-            // InternalModa.g:601:5: lv_name_1_0= ruleEString
+            // InternalModa.g:500:4: (lv_name_2_0= ruleEString )
+            // InternalModa.g:501:5: lv_name_2_0= ruleEString
             {
 
-            					newCompositeNode(grammarAccess.getSTSAccess().getNameEStringParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getSTSAccess().getNameEStringParserRuleCall_2_0());
             				
             pushFollow(FOLLOW_2);
-            lv_name_1_0=ruleEString();
+            lv_name_2_0=ruleEString();
 
             state._fsp--;
 
@@ -1349,7 +1157,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"name",
-            						lv_name_1_0,
+            						lv_name_2_0,
             						"fr.diverse.moda.Moda.EString");
             					afterParserOrEnumRuleCall();
             				
@@ -1382,7 +1190,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMODARelation"
-    // InternalModa.g:622:1: entryRuleMODARelation returns [EObject current=null] : iv_ruleMODARelation= ruleMODARelation EOF ;
+    // InternalModa.g:522:1: entryRuleMODARelation returns [EObject current=null] : iv_ruleMODARelation= ruleMODARelation EOF ;
     public final EObject entryRuleMODARelation() throws RecognitionException {
         EObject current = null;
 
@@ -1390,8 +1198,8 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModa.g:622:53: (iv_ruleMODARelation= ruleMODARelation EOF )
-            // InternalModa.g:623:2: iv_ruleMODARelation= ruleMODARelation EOF
+            // InternalModa.g:522:53: (iv_ruleMODARelation= ruleMODARelation EOF )
+            // InternalModa.g:523:2: iv_ruleMODARelation= ruleMODARelation EOF
             {
              newCompositeNode(grammarAccess.getMODARelationRule()); 
             pushFollow(FOLLOW_1);
@@ -1418,29 +1226,29 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMODARelation"
-    // InternalModa.g:629:1: ruleMODARelation returns [EObject current=null] : ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleRelationKind ) ) ( ( ruleEString ) ) otherlv_4= '->' (otherlv_5= 'tgt' ( ( ruleEString ) ) ) ) ;
+    // InternalModa.g:529:1: ruleMODARelation returns [EObject current=null] : ( () otherlv_1= 'relation' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleRelationKind ) ) ( ( ruleEString ) ) otherlv_5= '->' ( ( ruleEString ) ) ) ;
     public final EObject ruleMODARelation() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_4=null;
+        Token otherlv_1=null;
         Token otherlv_5=null;
-        AntlrDatatypeRuleToken lv_name_1_0 = null;
+        AntlrDatatypeRuleToken lv_name_2_0 = null;
 
-        Enumerator lv_kind_2_0 = null;
+        Enumerator lv_kind_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalModa.g:635:2: ( ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleRelationKind ) ) ( ( ruleEString ) ) otherlv_4= '->' (otherlv_5= 'tgt' ( ( ruleEString ) ) ) ) )
-            // InternalModa.g:636:2: ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleRelationKind ) ) ( ( ruleEString ) ) otherlv_4= '->' (otherlv_5= 'tgt' ( ( ruleEString ) ) ) )
+            // InternalModa.g:535:2: ( ( () otherlv_1= 'relation' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleRelationKind ) ) ( ( ruleEString ) ) otherlv_5= '->' ( ( ruleEString ) ) ) )
+            // InternalModa.g:536:2: ( () otherlv_1= 'relation' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleRelationKind ) ) ( ( ruleEString ) ) otherlv_5= '->' ( ( ruleEString ) ) )
             {
-            // InternalModa.g:636:2: ( () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleRelationKind ) ) ( ( ruleEString ) ) otherlv_4= '->' (otherlv_5= 'tgt' ( ( ruleEString ) ) ) )
-            // InternalModa.g:637:3: () ( (lv_name_1_0= ruleEString ) ) ( (lv_kind_2_0= ruleRelationKind ) ) ( ( ruleEString ) ) otherlv_4= '->' (otherlv_5= 'tgt' ( ( ruleEString ) ) )
+            // InternalModa.g:536:2: ( () otherlv_1= 'relation' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleRelationKind ) ) ( ( ruleEString ) ) otherlv_5= '->' ( ( ruleEString ) ) )
+            // InternalModa.g:537:3: () otherlv_1= 'relation' ( (lv_name_2_0= ruleEString ) ) ( (lv_kind_3_0= ruleRelationKind ) ) ( ( ruleEString ) ) otherlv_5= '->' ( ( ruleEString ) )
             {
-            // InternalModa.g:637:3: ()
-            // InternalModa.g:638:4: 
+            // InternalModa.g:537:3: ()
+            // InternalModa.g:538:4: 
             {
 
             				current = forceCreateModelElement(
@@ -1450,17 +1258,21 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:644:3: ( (lv_name_1_0= ruleEString ) )
-            // InternalModa.g:645:4: (lv_name_1_0= ruleEString )
+            otherlv_1=(Token)match(input,19,FOLLOW_3); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getMODARelationAccess().getRelationKeyword_1());
+            		
+            // InternalModa.g:548:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalModa.g:549:4: (lv_name_2_0= ruleEString )
             {
-            // InternalModa.g:645:4: (lv_name_1_0= ruleEString )
-            // InternalModa.g:646:5: lv_name_1_0= ruleEString
+            // InternalModa.g:549:4: (lv_name_2_0= ruleEString )
+            // InternalModa.g:550:5: lv_name_2_0= ruleEString
             {
 
-            					newCompositeNode(grammarAccess.getMODARelationAccess().getNameEStringParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getMODARelationAccess().getNameEStringParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_16);
-            lv_name_1_0=ruleEString();
+            pushFollow(FOLLOW_11);
+            lv_name_2_0=ruleEString();
 
             state._fsp--;
 
@@ -1471,7 +1283,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"name",
-            						lv_name_1_0,
+            						lv_name_2_0,
             						"fr.diverse.moda.Moda.EString");
             					afterParserOrEnumRuleCall();
             				
@@ -1481,17 +1293,17 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:663:3: ( (lv_kind_2_0= ruleRelationKind ) )
-            // InternalModa.g:664:4: (lv_kind_2_0= ruleRelationKind )
+            // InternalModa.g:567:3: ( (lv_kind_3_0= ruleRelationKind ) )
+            // InternalModa.g:568:4: (lv_kind_3_0= ruleRelationKind )
             {
-            // InternalModa.g:664:4: (lv_kind_2_0= ruleRelationKind )
-            // InternalModa.g:665:5: lv_kind_2_0= ruleRelationKind
+            // InternalModa.g:568:4: (lv_kind_3_0= ruleRelationKind )
+            // InternalModa.g:569:5: lv_kind_3_0= ruleRelationKind
             {
 
-            					newCompositeNode(grammarAccess.getMODARelationAccess().getKindRelationKindEnumRuleCall_2_0());
+            					newCompositeNode(grammarAccess.getMODARelationAccess().getKindRelationKindEnumRuleCall_3_0());
             				
             pushFollow(FOLLOW_3);
-            lv_kind_2_0=ruleRelationKind();
+            lv_kind_3_0=ruleRelationKind();
 
             state._fsp--;
 
@@ -1502,7 +1314,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"kind",
-            						lv_kind_2_0,
+            						lv_kind_3_0,
             						"fr.diverse.moda.Moda.RelationKind");
             					afterParserOrEnumRuleCall();
             				
@@ -1512,11 +1324,11 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModa.g:682:3: ( ( ruleEString ) )
-            // InternalModa.g:683:4: ( ruleEString )
+            // InternalModa.g:586:3: ( ( ruleEString ) )
+            // InternalModa.g:587:4: ( ruleEString )
             {
-            // InternalModa.g:683:4: ( ruleEString )
-            // InternalModa.g:684:5: ruleEString
+            // InternalModa.g:587:4: ( ruleEString )
+            // InternalModa.g:588:5: ruleEString
             {
 
             					if (current==null) {
@@ -1524,9 +1336,9 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
             					}
             				
 
-            					newCompositeNode(grammarAccess.getMODARelationAccess().getSrcMODAElementCrossReference_3_0());
+            					newCompositeNode(grammarAccess.getMODARelationAccess().getSrcMODAElementCrossReference_4_0());
             				
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_12);
             ruleEString();
 
             state._fsp--;
@@ -1540,42 +1352,32 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,21,FOLLOW_18); 
+            otherlv_5=(Token)match(input,20,FOLLOW_3); 
 
-            			newLeafNode(otherlv_4, grammarAccess.getMODARelationAccess().getHyphenMinusGreaterThanSignKeyword_4());
+            			newLeafNode(otherlv_5, grammarAccess.getMODARelationAccess().getHyphenMinusGreaterThanSignKeyword_5());
             		
-            // InternalModa.g:702:3: (otherlv_5= 'tgt' ( ( ruleEString ) ) )
-            // InternalModa.g:703:4: otherlv_5= 'tgt' ( ( ruleEString ) )
+            // InternalModa.g:606:3: ( ( ruleEString ) )
+            // InternalModa.g:607:4: ( ruleEString )
             {
-            otherlv_5=(Token)match(input,22,FOLLOW_3); 
-
-            				newLeafNode(otherlv_5, grammarAccess.getMODARelationAccess().getTgtKeyword_5_0());
-            			
-            // InternalModa.g:707:4: ( ( ruleEString ) )
-            // InternalModa.g:708:5: ( ruleEString )
-            {
-            // InternalModa.g:708:5: ( ruleEString )
-            // InternalModa.g:709:6: ruleEString
+            // InternalModa.g:607:4: ( ruleEString )
+            // InternalModa.g:608:5: ruleEString
             {
 
-            						if (current==null) {
-            							current = createModelElement(grammarAccess.getMODARelationRule());
-            						}
-            					
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getMODARelationRule());
+            					}
+            				
 
-            						newCompositeNode(grammarAccess.getMODARelationAccess().getTgtMODAElementCrossReference_5_1_0());
-            					
+            					newCompositeNode(grammarAccess.getMODARelationAccess().getTgtMODAElementCrossReference_6_0());
+            				
             pushFollow(FOLLOW_2);
             ruleEString();
 
             state._fsp--;
 
 
-            						afterParserOrEnumRuleCall();
-            					
-
-            }
-
+            					afterParserOrEnumRuleCall();
+            				
 
             }
 
@@ -1605,7 +1407,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEString"
-    // InternalModa.g:728:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
+    // InternalModa.g:626:1: entryRuleEString returns [String current=null] : iv_ruleEString= ruleEString EOF ;
     public final String entryRuleEString() throws RecognitionException {
         String current = null;
 
@@ -1613,8 +1415,8 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModa.g:728:47: (iv_ruleEString= ruleEString EOF )
-            // InternalModa.g:729:2: iv_ruleEString= ruleEString EOF
+            // InternalModa.g:626:47: (iv_ruleEString= ruleEString EOF )
+            // InternalModa.g:627:2: iv_ruleEString= ruleEString EOF
             {
              newCompositeNode(grammarAccess.getEStringRule()); 
             pushFollow(FOLLOW_1);
@@ -1641,7 +1443,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEString"
-    // InternalModa.g:735:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
+    // InternalModa.g:633:1: ruleEString returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) ;
     public final AntlrDatatypeRuleToken ruleEString() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1652,28 +1454,28 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModa.g:741:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
-            // InternalModa.g:742:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            // InternalModa.g:639:2: ( (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID ) )
+            // InternalModa.g:640:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
             {
-            // InternalModa.g:742:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // InternalModa.g:640:2: (this_STRING_0= RULE_STRING | this_ID_1= RULE_ID )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA11_0==RULE_STRING) ) {
-                alt11=1;
+            if ( (LA6_0==RULE_STRING) ) {
+                alt6=1;
             }
-            else if ( (LA11_0==RULE_ID) ) {
-                alt11=2;
+            else if ( (LA6_0==RULE_ID) ) {
+                alt6=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt11) {
+            switch (alt6) {
                 case 1 :
-                    // InternalModa.g:743:3: this_STRING_0= RULE_STRING
+                    // InternalModa.g:641:3: this_STRING_0= RULE_STRING
                     {
                     this_STRING_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -1686,7 +1488,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModa.g:751:3: this_ID_1= RULE_ID
+                    // InternalModa.g:649:3: this_ID_1= RULE_ID
                     {
                     this_ID_1=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -1721,7 +1523,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModelKind"
-    // InternalModa.g:762:1: ruleModelKind returns [Enumerator current=null] : ( (enumLiteral_0= 'prescriptive' ) | (enumLiteral_1= 'predictive' ) | (enumLiteral_2= 'descriptive' ) ) ;
+    // InternalModa.g:660:1: ruleModelKind returns [Enumerator current=null] : ( (enumLiteral_0= 'prescriptive' ) | (enumLiteral_1= 'predictive' ) | (enumLiteral_2= 'descriptive' ) ) ;
     public final Enumerator ruleModelKind() throws RecognitionException {
         Enumerator current = null;
 
@@ -1733,42 +1535,42 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModa.g:768:2: ( ( (enumLiteral_0= 'prescriptive' ) | (enumLiteral_1= 'predictive' ) | (enumLiteral_2= 'descriptive' ) ) )
-            // InternalModa.g:769:2: ( (enumLiteral_0= 'prescriptive' ) | (enumLiteral_1= 'predictive' ) | (enumLiteral_2= 'descriptive' ) )
+            // InternalModa.g:666:2: ( ( (enumLiteral_0= 'prescriptive' ) | (enumLiteral_1= 'predictive' ) | (enumLiteral_2= 'descriptive' ) ) )
+            // InternalModa.g:667:2: ( (enumLiteral_0= 'prescriptive' ) | (enumLiteral_1= 'predictive' ) | (enumLiteral_2= 'descriptive' ) )
             {
-            // InternalModa.g:769:2: ( (enumLiteral_0= 'prescriptive' ) | (enumLiteral_1= 'predictive' ) | (enumLiteral_2= 'descriptive' ) )
-            int alt12=3;
+            // InternalModa.g:667:2: ( (enumLiteral_0= 'prescriptive' ) | (enumLiteral_1= 'predictive' ) | (enumLiteral_2= 'descriptive' ) )
+            int alt7=3;
             switch ( input.LA(1) ) {
+            case 21:
+                {
+                alt7=1;
+                }
+                break;
+            case 22:
+                {
+                alt7=2;
+                }
+                break;
             case 23:
                 {
-                alt12=1;
-                }
-                break;
-            case 24:
-                {
-                alt12=2;
-                }
-                break;
-            case 25:
-                {
-                alt12=3;
+                alt7=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt12) {
+            switch (alt7) {
                 case 1 :
-                    // InternalModa.g:770:3: (enumLiteral_0= 'prescriptive' )
+                    // InternalModa.g:668:3: (enumLiteral_0= 'prescriptive' )
                     {
-                    // InternalModa.g:770:3: (enumLiteral_0= 'prescriptive' )
-                    // InternalModa.g:771:4: enumLiteral_0= 'prescriptive'
+                    // InternalModa.g:668:3: (enumLiteral_0= 'prescriptive' )
+                    // InternalModa.g:669:4: enumLiteral_0= 'prescriptive'
                     {
-                    enumLiteral_0=(Token)match(input,23,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,21,FOLLOW_2); 
 
                     				current = grammarAccess.getModelKindAccess().getPrescriptiveEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getModelKindAccess().getPrescriptiveEnumLiteralDeclaration_0());
@@ -1780,12 +1582,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModa.g:778:3: (enumLiteral_1= 'predictive' )
+                    // InternalModa.g:676:3: (enumLiteral_1= 'predictive' )
                     {
-                    // InternalModa.g:778:3: (enumLiteral_1= 'predictive' )
-                    // InternalModa.g:779:4: enumLiteral_1= 'predictive'
+                    // InternalModa.g:676:3: (enumLiteral_1= 'predictive' )
+                    // InternalModa.g:677:4: enumLiteral_1= 'predictive'
                     {
-                    enumLiteral_1=(Token)match(input,24,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,22,FOLLOW_2); 
 
                     				current = grammarAccess.getModelKindAccess().getPredictiveEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getModelKindAccess().getPredictiveEnumLiteralDeclaration_1());
@@ -1797,12 +1599,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalModa.g:786:3: (enumLiteral_2= 'descriptive' )
+                    // InternalModa.g:684:3: (enumLiteral_2= 'descriptive' )
                     {
-                    // InternalModa.g:786:3: (enumLiteral_2= 'descriptive' )
-                    // InternalModa.g:787:4: enumLiteral_2= 'descriptive'
+                    // InternalModa.g:684:3: (enumLiteral_2= 'descriptive' )
+                    // InternalModa.g:685:4: enumLiteral_2= 'descriptive'
                     {
-                    enumLiteral_2=(Token)match(input,25,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,23,FOLLOW_2); 
 
                     				current = grammarAccess.getModelKindAccess().getDescriptiveEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getModelKindAccess().getDescriptiveEnumLiteralDeclaration_2());
@@ -1836,7 +1638,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDataKind"
-    // InternalModa.g:797:1: ruleDataKind returns [Enumerator current=null] : ( (enumLiteral_0= 'input' ) | (enumLiteral_1= 'output' ) | (enumLiteral_2= 'external' ) | (enumLiteral_3= 'measured' ) ) ;
+    // InternalModa.g:695:1: ruleDataKind returns [Enumerator current=null] : ( (enumLiteral_0= 'input' ) | (enumLiteral_1= 'output' ) | (enumLiteral_2= 'external' ) | (enumLiteral_3= 'measured' ) ) ;
     public final Enumerator ruleDataKind() throws RecognitionException {
         Enumerator current = null;
 
@@ -1849,47 +1651,47 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModa.g:803:2: ( ( (enumLiteral_0= 'input' ) | (enumLiteral_1= 'output' ) | (enumLiteral_2= 'external' ) | (enumLiteral_3= 'measured' ) ) )
-            // InternalModa.g:804:2: ( (enumLiteral_0= 'input' ) | (enumLiteral_1= 'output' ) | (enumLiteral_2= 'external' ) | (enumLiteral_3= 'measured' ) )
+            // InternalModa.g:701:2: ( ( (enumLiteral_0= 'input' ) | (enumLiteral_1= 'output' ) | (enumLiteral_2= 'external' ) | (enumLiteral_3= 'measured' ) ) )
+            // InternalModa.g:702:2: ( (enumLiteral_0= 'input' ) | (enumLiteral_1= 'output' ) | (enumLiteral_2= 'external' ) | (enumLiteral_3= 'measured' ) )
             {
-            // InternalModa.g:804:2: ( (enumLiteral_0= 'input' ) | (enumLiteral_1= 'output' ) | (enumLiteral_2= 'external' ) | (enumLiteral_3= 'measured' ) )
-            int alt13=4;
+            // InternalModa.g:702:2: ( (enumLiteral_0= 'input' ) | (enumLiteral_1= 'output' ) | (enumLiteral_2= 'external' ) | (enumLiteral_3= 'measured' ) )
+            int alt8=4;
             switch ( input.LA(1) ) {
+            case 24:
+                {
+                alt8=1;
+                }
+                break;
+            case 25:
+                {
+                alt8=2;
+                }
+                break;
             case 26:
                 {
-                alt13=1;
+                alt8=3;
                 }
                 break;
             case 27:
                 {
-                alt13=2;
-                }
-                break;
-            case 28:
-                {
-                alt13=3;
-                }
-                break;
-            case 29:
-                {
-                alt13=4;
+                alt8=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt13) {
+            switch (alt8) {
                 case 1 :
-                    // InternalModa.g:805:3: (enumLiteral_0= 'input' )
+                    // InternalModa.g:703:3: (enumLiteral_0= 'input' )
                     {
-                    // InternalModa.g:805:3: (enumLiteral_0= 'input' )
-                    // InternalModa.g:806:4: enumLiteral_0= 'input'
+                    // InternalModa.g:703:3: (enumLiteral_0= 'input' )
+                    // InternalModa.g:704:4: enumLiteral_0= 'input'
                     {
-                    enumLiteral_0=(Token)match(input,26,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,24,FOLLOW_2); 
 
                     				current = grammarAccess.getDataKindAccess().getInputEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getDataKindAccess().getInputEnumLiteralDeclaration_0());
@@ -1901,12 +1703,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModa.g:813:3: (enumLiteral_1= 'output' )
+                    // InternalModa.g:711:3: (enumLiteral_1= 'output' )
                     {
-                    // InternalModa.g:813:3: (enumLiteral_1= 'output' )
-                    // InternalModa.g:814:4: enumLiteral_1= 'output'
+                    // InternalModa.g:711:3: (enumLiteral_1= 'output' )
+                    // InternalModa.g:712:4: enumLiteral_1= 'output'
                     {
-                    enumLiteral_1=(Token)match(input,27,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,25,FOLLOW_2); 
 
                     				current = grammarAccess.getDataKindAccess().getOutputEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getDataKindAccess().getOutputEnumLiteralDeclaration_1());
@@ -1918,12 +1720,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalModa.g:821:3: (enumLiteral_2= 'external' )
+                    // InternalModa.g:719:3: (enumLiteral_2= 'external' )
                     {
-                    // InternalModa.g:821:3: (enumLiteral_2= 'external' )
-                    // InternalModa.g:822:4: enumLiteral_2= 'external'
+                    // InternalModa.g:719:3: (enumLiteral_2= 'external' )
+                    // InternalModa.g:720:4: enumLiteral_2= 'external'
                     {
-                    enumLiteral_2=(Token)match(input,28,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,26,FOLLOW_2); 
 
                     				current = grammarAccess.getDataKindAccess().getExternalEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getDataKindAccess().getExternalEnumLiteralDeclaration_2());
@@ -1935,12 +1737,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalModa.g:829:3: (enumLiteral_3= 'measured' )
+                    // InternalModa.g:727:3: (enumLiteral_3= 'measured' )
                     {
-                    // InternalModa.g:829:3: (enumLiteral_3= 'measured' )
-                    // InternalModa.g:830:4: enumLiteral_3= 'measured'
+                    // InternalModa.g:727:3: (enumLiteral_3= 'measured' )
+                    // InternalModa.g:728:4: enumLiteral_3= 'measured'
                     {
-                    enumLiteral_3=(Token)match(input,29,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,27,FOLLOW_2); 
 
                     				current = grammarAccess.getDataKindAccess().getMeasuredEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getDataKindAccess().getMeasuredEnumLiteralDeclaration_3());
@@ -1974,7 +1776,7 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRelationKind"
-    // InternalModa.g:840:1: ruleRelationKind returns [Enumerator current=null] : ( (enumLiteral_0= 'generation' ) | (enumLiteral_1= 'enactment' ) | (enumLiteral_2= 'deployment' ) | (enumLiteral_3= 'input' ) | (enumLiteral_4= 'output' ) | (enumLiteral_5= 'measurement' ) | (enumLiteral_6= 'otherInterplay' ) | (enumLiteral_7= 'generalization' ) | (enumLiteral_8= 'preparation' ) | (enumLiteral_9= 'analysis' ) ) ;
+    // InternalModa.g:738:1: ruleRelationKind returns [Enumerator current=null] : ( (enumLiteral_0= 'generation' ) | (enumLiteral_1= 'enactment' ) | (enumLiteral_2= 'deployment' ) | (enumLiteral_3= 'input' ) | (enumLiteral_4= 'output' ) | (enumLiteral_5= 'measurement' ) | (enumLiteral_6= 'otherInterplay' ) | (enumLiteral_7= 'generalization' ) | (enumLiteral_8= 'preparation' ) | (enumLiteral_9= 'analysis' ) ) ;
     public final Enumerator ruleRelationKind() throws RecognitionException {
         Enumerator current = null;
 
@@ -1993,77 +1795,77 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModa.g:846:2: ( ( (enumLiteral_0= 'generation' ) | (enumLiteral_1= 'enactment' ) | (enumLiteral_2= 'deployment' ) | (enumLiteral_3= 'input' ) | (enumLiteral_4= 'output' ) | (enumLiteral_5= 'measurement' ) | (enumLiteral_6= 'otherInterplay' ) | (enumLiteral_7= 'generalization' ) | (enumLiteral_8= 'preparation' ) | (enumLiteral_9= 'analysis' ) ) )
-            // InternalModa.g:847:2: ( (enumLiteral_0= 'generation' ) | (enumLiteral_1= 'enactment' ) | (enumLiteral_2= 'deployment' ) | (enumLiteral_3= 'input' ) | (enumLiteral_4= 'output' ) | (enumLiteral_5= 'measurement' ) | (enumLiteral_6= 'otherInterplay' ) | (enumLiteral_7= 'generalization' ) | (enumLiteral_8= 'preparation' ) | (enumLiteral_9= 'analysis' ) )
+            // InternalModa.g:744:2: ( ( (enumLiteral_0= 'generation' ) | (enumLiteral_1= 'enactment' ) | (enumLiteral_2= 'deployment' ) | (enumLiteral_3= 'input' ) | (enumLiteral_4= 'output' ) | (enumLiteral_5= 'measurement' ) | (enumLiteral_6= 'otherInterplay' ) | (enumLiteral_7= 'generalization' ) | (enumLiteral_8= 'preparation' ) | (enumLiteral_9= 'analysis' ) ) )
+            // InternalModa.g:745:2: ( (enumLiteral_0= 'generation' ) | (enumLiteral_1= 'enactment' ) | (enumLiteral_2= 'deployment' ) | (enumLiteral_3= 'input' ) | (enumLiteral_4= 'output' ) | (enumLiteral_5= 'measurement' ) | (enumLiteral_6= 'otherInterplay' ) | (enumLiteral_7= 'generalization' ) | (enumLiteral_8= 'preparation' ) | (enumLiteral_9= 'analysis' ) )
             {
-            // InternalModa.g:847:2: ( (enumLiteral_0= 'generation' ) | (enumLiteral_1= 'enactment' ) | (enumLiteral_2= 'deployment' ) | (enumLiteral_3= 'input' ) | (enumLiteral_4= 'output' ) | (enumLiteral_5= 'measurement' ) | (enumLiteral_6= 'otherInterplay' ) | (enumLiteral_7= 'generalization' ) | (enumLiteral_8= 'preparation' ) | (enumLiteral_9= 'analysis' ) )
-            int alt14=10;
+            // InternalModa.g:745:2: ( (enumLiteral_0= 'generation' ) | (enumLiteral_1= 'enactment' ) | (enumLiteral_2= 'deployment' ) | (enumLiteral_3= 'input' ) | (enumLiteral_4= 'output' ) | (enumLiteral_5= 'measurement' ) | (enumLiteral_6= 'otherInterplay' ) | (enumLiteral_7= 'generalization' ) | (enumLiteral_8= 'preparation' ) | (enumLiteral_9= 'analysis' ) )
+            int alt9=10;
             switch ( input.LA(1) ) {
+            case 28:
+                {
+                alt9=1;
+                }
+                break;
+            case 29:
+                {
+                alt9=2;
+                }
+                break;
             case 30:
                 {
-                alt14=1;
+                alt9=3;
+                }
+                break;
+            case 24:
+                {
+                alt9=4;
+                }
+                break;
+            case 25:
+                {
+                alt9=5;
                 }
                 break;
             case 31:
                 {
-                alt14=2;
+                alt9=6;
                 }
                 break;
             case 32:
                 {
-                alt14=3;
-                }
-                break;
-            case 26:
-                {
-                alt14=4;
-                }
-                break;
-            case 27:
-                {
-                alt14=5;
+                alt9=7;
                 }
                 break;
             case 33:
                 {
-                alt14=6;
+                alt9=8;
                 }
                 break;
             case 34:
                 {
-                alt14=7;
+                alt9=9;
                 }
                 break;
             case 35:
                 {
-                alt14=8;
-                }
-                break;
-            case 36:
-                {
-                alt14=9;
-                }
-                break;
-            case 37:
-                {
-                alt14=10;
+                alt9=10;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt14) {
+            switch (alt9) {
                 case 1 :
-                    // InternalModa.g:848:3: (enumLiteral_0= 'generation' )
+                    // InternalModa.g:746:3: (enumLiteral_0= 'generation' )
                     {
-                    // InternalModa.g:848:3: (enumLiteral_0= 'generation' )
-                    // InternalModa.g:849:4: enumLiteral_0= 'generation'
+                    // InternalModa.g:746:3: (enumLiteral_0= 'generation' )
+                    // InternalModa.g:747:4: enumLiteral_0= 'generation'
                     {
-                    enumLiteral_0=(Token)match(input,30,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,28,FOLLOW_2); 
 
                     				current = grammarAccess.getRelationKindAccess().getGenerationEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getRelationKindAccess().getGenerationEnumLiteralDeclaration_0());
@@ -2075,12 +1877,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModa.g:856:3: (enumLiteral_1= 'enactment' )
+                    // InternalModa.g:754:3: (enumLiteral_1= 'enactment' )
                     {
-                    // InternalModa.g:856:3: (enumLiteral_1= 'enactment' )
-                    // InternalModa.g:857:4: enumLiteral_1= 'enactment'
+                    // InternalModa.g:754:3: (enumLiteral_1= 'enactment' )
+                    // InternalModa.g:755:4: enumLiteral_1= 'enactment'
                     {
-                    enumLiteral_1=(Token)match(input,31,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,29,FOLLOW_2); 
 
                     				current = grammarAccess.getRelationKindAccess().getEnactmentEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getRelationKindAccess().getEnactmentEnumLiteralDeclaration_1());
@@ -2092,12 +1894,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalModa.g:864:3: (enumLiteral_2= 'deployment' )
+                    // InternalModa.g:762:3: (enumLiteral_2= 'deployment' )
                     {
-                    // InternalModa.g:864:3: (enumLiteral_2= 'deployment' )
-                    // InternalModa.g:865:4: enumLiteral_2= 'deployment'
+                    // InternalModa.g:762:3: (enumLiteral_2= 'deployment' )
+                    // InternalModa.g:763:4: enumLiteral_2= 'deployment'
                     {
-                    enumLiteral_2=(Token)match(input,32,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,30,FOLLOW_2); 
 
                     				current = grammarAccess.getRelationKindAccess().getDeploymentEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getRelationKindAccess().getDeploymentEnumLiteralDeclaration_2());
@@ -2109,12 +1911,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalModa.g:872:3: (enumLiteral_3= 'input' )
+                    // InternalModa.g:770:3: (enumLiteral_3= 'input' )
                     {
-                    // InternalModa.g:872:3: (enumLiteral_3= 'input' )
-                    // InternalModa.g:873:4: enumLiteral_3= 'input'
+                    // InternalModa.g:770:3: (enumLiteral_3= 'input' )
+                    // InternalModa.g:771:4: enumLiteral_3= 'input'
                     {
-                    enumLiteral_3=(Token)match(input,26,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,24,FOLLOW_2); 
 
                     				current = grammarAccess.getRelationKindAccess().getInputEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getRelationKindAccess().getInputEnumLiteralDeclaration_3());
@@ -2126,12 +1928,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalModa.g:880:3: (enumLiteral_4= 'output' )
+                    // InternalModa.g:778:3: (enumLiteral_4= 'output' )
                     {
-                    // InternalModa.g:880:3: (enumLiteral_4= 'output' )
-                    // InternalModa.g:881:4: enumLiteral_4= 'output'
+                    // InternalModa.g:778:3: (enumLiteral_4= 'output' )
+                    // InternalModa.g:779:4: enumLiteral_4= 'output'
                     {
-                    enumLiteral_4=(Token)match(input,27,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,25,FOLLOW_2); 
 
                     				current = grammarAccess.getRelationKindAccess().getOutputEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getRelationKindAccess().getOutputEnumLiteralDeclaration_4());
@@ -2143,12 +1945,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalModa.g:888:3: (enumLiteral_5= 'measurement' )
+                    // InternalModa.g:786:3: (enumLiteral_5= 'measurement' )
                     {
-                    // InternalModa.g:888:3: (enumLiteral_5= 'measurement' )
-                    // InternalModa.g:889:4: enumLiteral_5= 'measurement'
+                    // InternalModa.g:786:3: (enumLiteral_5= 'measurement' )
+                    // InternalModa.g:787:4: enumLiteral_5= 'measurement'
                     {
-                    enumLiteral_5=(Token)match(input,33,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,31,FOLLOW_2); 
 
                     				current = grammarAccess.getRelationKindAccess().getMeasurementEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getRelationKindAccess().getMeasurementEnumLiteralDeclaration_5());
@@ -2160,12 +1962,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalModa.g:896:3: (enumLiteral_6= 'otherInterplay' )
+                    // InternalModa.g:794:3: (enumLiteral_6= 'otherInterplay' )
                     {
-                    // InternalModa.g:896:3: (enumLiteral_6= 'otherInterplay' )
-                    // InternalModa.g:897:4: enumLiteral_6= 'otherInterplay'
+                    // InternalModa.g:794:3: (enumLiteral_6= 'otherInterplay' )
+                    // InternalModa.g:795:4: enumLiteral_6= 'otherInterplay'
                     {
-                    enumLiteral_6=(Token)match(input,34,FOLLOW_2); 
+                    enumLiteral_6=(Token)match(input,32,FOLLOW_2); 
 
                     				current = grammarAccess.getRelationKindAccess().getOtherInterplayEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_6, grammarAccess.getRelationKindAccess().getOtherInterplayEnumLiteralDeclaration_6());
@@ -2177,12 +1979,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalModa.g:904:3: (enumLiteral_7= 'generalization' )
+                    // InternalModa.g:802:3: (enumLiteral_7= 'generalization' )
                     {
-                    // InternalModa.g:904:3: (enumLiteral_7= 'generalization' )
-                    // InternalModa.g:905:4: enumLiteral_7= 'generalization'
+                    // InternalModa.g:802:3: (enumLiteral_7= 'generalization' )
+                    // InternalModa.g:803:4: enumLiteral_7= 'generalization'
                     {
-                    enumLiteral_7=(Token)match(input,35,FOLLOW_2); 
+                    enumLiteral_7=(Token)match(input,33,FOLLOW_2); 
 
                     				current = grammarAccess.getRelationKindAccess().getGeneralizationEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_7, grammarAccess.getRelationKindAccess().getGeneralizationEnumLiteralDeclaration_7());
@@ -2194,12 +1996,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalModa.g:912:3: (enumLiteral_8= 'preparation' )
+                    // InternalModa.g:810:3: (enumLiteral_8= 'preparation' )
                     {
-                    // InternalModa.g:912:3: (enumLiteral_8= 'preparation' )
-                    // InternalModa.g:913:4: enumLiteral_8= 'preparation'
+                    // InternalModa.g:810:3: (enumLiteral_8= 'preparation' )
+                    // InternalModa.g:811:4: enumLiteral_8= 'preparation'
                     {
-                    enumLiteral_8=(Token)match(input,36,FOLLOW_2); 
+                    enumLiteral_8=(Token)match(input,34,FOLLOW_2); 
 
                     				current = grammarAccess.getRelationKindAccess().getPreparationEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_8, grammarAccess.getRelationKindAccess().getPreparationEnumLiteralDeclaration_8());
@@ -2211,12 +2013,12 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalModa.g:920:3: (enumLiteral_9= 'analysis' )
+                    // InternalModa.g:818:3: (enumLiteral_9= 'analysis' )
                     {
-                    // InternalModa.g:920:3: (enumLiteral_9= 'analysis' )
-                    // InternalModa.g:921:4: enumLiteral_9= 'analysis'
+                    // InternalModa.g:818:3: (enumLiteral_9= 'analysis' )
+                    // InternalModa.g:819:4: enumLiteral_9= 'analysis'
                     {
-                    enumLiteral_9=(Token)match(input,37,FOLLOW_2); 
+                    enumLiteral_9=(Token)match(input,35,FOLLOW_2); 
 
                     				current = grammarAccess.getRelationKindAccess().getAnalysisEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_9, grammarAccess.getRelationKindAccess().getAnalysisEnumLiteralDeclaration_9());
@@ -2257,19 +2059,13 @@ public class InternalModaParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x00000000000FA000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x000000000000C000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000006000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x00000000000F8000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x00000000000E8000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x00000000000C8000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000088000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000003800000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x000000003C000000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000003FCC000000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000E00000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000032L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x000000000F000000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000FF3000000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000100000L});
 
 }

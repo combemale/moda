@@ -35,61 +35,36 @@ public class ModaGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cModelKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cModelAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cModelModelParserRuleCall_4_2_0 = (RuleCall)cModelAssignment_4_2.eContents().get(0);
-		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
-		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
-		private final Assignment cModelAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
-		private final RuleCall cModelModelParserRuleCall_4_3_1_0 = (RuleCall)cModelAssignment_4_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cDataKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
-		private final Assignment cDataAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
-		private final RuleCall cDataDataParserRuleCall_5_2_0 = (RuleCall)cDataAssignment_5_2.eContents().get(0);
-		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
-		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
-		private final Assignment cDataAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
-		private final RuleCall cDataDataParserRuleCall_5_3_1_0 = (RuleCall)cDataAssignment_5_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cSoftwareKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cSoftwareAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cSoftwareRunningSoftwareParserRuleCall_6_1_0 = (RuleCall)cSoftwareAssignment_6_1.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cStsKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cStsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cStsSTSParserRuleCall_7_1_0 = (RuleCall)cStsAssignment_7_1.eContents().get(0);
-		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cRelationKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
-		private final Assignment cModarelationAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
-		private final RuleCall cModarelationMODARelationParserRuleCall_8_2_0 = (RuleCall)cModarelationAssignment_8_2.eContents().get(0);
-		private final Group cGroup_8_3 = (Group)cGroup_8.eContents().get(3);
-		private final Keyword cCommaKeyword_8_3_0 = (Keyword)cGroup_8_3.eContents().get(0);
-		private final Assignment cModarelationAssignment_8_3_1 = (Assignment)cGroup_8_3.eContents().get(1);
-		private final RuleCall cModarelationMODARelationParserRuleCall_8_3_1_0 = (RuleCall)cModarelationAssignment_8_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8_4 = (Keyword)cGroup_8.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cModelAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
+		private final RuleCall cModelModelParserRuleCall_4_0_0 = (RuleCall)cModelAssignment_4_0.eContents().get(0);
+		private final Group cGroup_4_1 = (Group)cGroup_4.eContents().get(1);
+		private final Keyword cCommaKeyword_4_1_0 = (Keyword)cGroup_4_1.eContents().get(0);
+		private final Alternatives cAlternatives_4_1_1 = (Alternatives)cGroup_4_1.eContents().get(1);
+		private final Assignment cModelAssignment_4_1_1_0 = (Assignment)cAlternatives_4_1_1.eContents().get(0);
+		private final RuleCall cModelModelParserRuleCall_4_1_1_0_0 = (RuleCall)cModelAssignment_4_1_1_0.eContents().get(0);
+		private final Assignment cDataAssignment_4_1_1_1 = (Assignment)cAlternatives_4_1_1.eContents().get(1);
+		private final RuleCall cDataDataParserRuleCall_4_1_1_1_0 = (RuleCall)cDataAssignment_4_1_1_1.eContents().get(0);
+		private final Assignment cSoftwareAssignment_4_1_1_2 = (Assignment)cAlternatives_4_1_1.eContents().get(2);
+		private final RuleCall cSoftwareRunningSoftwareParserRuleCall_4_1_1_2_0 = (RuleCall)cSoftwareAssignment_4_1_1_2.eContents().get(0);
+		private final Assignment cStsAssignment_4_1_1_3 = (Assignment)cAlternatives_4_1_1.eContents().get(3);
+		private final RuleCall cStsSTSParserRuleCall_4_1_1_3_0 = (RuleCall)cStsAssignment_4_1_1_3.eContents().get(0);
+		private final Assignment cModarelationAssignment_4_1_1_4 = (Assignment)cAlternatives_4_1_1.eContents().get(4);
+		private final RuleCall cModarelationMODARelationParserRuleCall_4_1_1_4_0 = (RuleCall)cModarelationAssignment_4_1_1_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//MODAModel:
 		//	{MODAModel}
 		//	'MODAModel'
 		//	name=EString
-		//	'{' ('model' '{' model+=Model ("," model+=Model)* '}')? ('data' '{' data+=Data ("," data+=Data)* '}')? ('software'
-		//	software=RunningSoftware)? ('sts' sts=STS)? ('relation' '{' modarelation+=MODARelation ("," modarelation+=MODARelation
-		//	)* '}')?
+		//	'{' (model+=Model ("," (model+=Model | data+=Data | software=RunningSoftware | sts=STS | modarelation+=MODARelation))*
+		//	)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{MODAModel}
 		//'MODAModel'
 		//name=EString
-		//'{' ('model' '{' model+=Model ("," model+=Model)* '}')? ('data' '{' data+=Data ("," data+=Data)* '}')? ('software'
-		//software=RunningSoftware)? ('sts' sts=STS)? ('relation' '{' modarelation+=MODARelation ("," modarelation+=MODARelation)*
-		//'}')?
+		//'{' (model+=Model ("," (model+=Model | data+=Data | software=RunningSoftware | sts=STS | modarelation+=MODARelation))*)?
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -108,122 +83,56 @@ public class ModaGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
-		//('model' '{' model+=Model ("," model+=Model)* '}')?
+		//(model+=Model ("," (model+=Model | data+=Data | software=RunningSoftware | sts=STS | modarelation+=MODARelation))*)?
 		public Group getGroup_4() { return cGroup_4; }
 		
-		//'model'
-		public Keyword getModelKeyword_4_0() { return cModelKeyword_4_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
-		
 		//model+=Model
-		public Assignment getModelAssignment_4_2() { return cModelAssignment_4_2; }
+		public Assignment getModelAssignment_4_0() { return cModelAssignment_4_0; }
 		
 		//Model
-		public RuleCall getModelModelParserRuleCall_4_2_0() { return cModelModelParserRuleCall_4_2_0; }
+		public RuleCall getModelModelParserRuleCall_4_0_0() { return cModelModelParserRuleCall_4_0_0; }
 		
-		//("," model+=Model)*
-		public Group getGroup_4_3() { return cGroup_4_3; }
+		//("," (model+=Model | data+=Data | software=RunningSoftware | sts=STS | modarelation+=MODARelation))*
+		public Group getGroup_4_1() { return cGroup_4_1; }
 		
 		//","
-		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
+		public Keyword getCommaKeyword_4_1_0() { return cCommaKeyword_4_1_0; }
+		
+		//(model+=Model | data+=Data | software=RunningSoftware | sts=STS | modarelation+=MODARelation)
+		public Alternatives getAlternatives_4_1_1() { return cAlternatives_4_1_1; }
 		
 		//model+=Model
-		public Assignment getModelAssignment_4_3_1() { return cModelAssignment_4_3_1; }
+		public Assignment getModelAssignment_4_1_1_0() { return cModelAssignment_4_1_1_0; }
 		
 		//Model
-		public RuleCall getModelModelParserRuleCall_4_3_1_0() { return cModelModelParserRuleCall_4_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_4_4() { return cRightCurlyBracketKeyword_4_4; }
-		
-		//('data' '{' data+=Data ("," data+=Data)* '}')?
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'data'
-		public Keyword getDataKeyword_5_0() { return cDataKeyword_5_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
+		public RuleCall getModelModelParserRuleCall_4_1_1_0_0() { return cModelModelParserRuleCall_4_1_1_0_0; }
 		
 		//data+=Data
-		public Assignment getDataAssignment_5_2() { return cDataAssignment_5_2; }
+		public Assignment getDataAssignment_4_1_1_1() { return cDataAssignment_4_1_1_1; }
 		
 		//Data
-		public RuleCall getDataDataParserRuleCall_5_2_0() { return cDataDataParserRuleCall_5_2_0; }
-		
-		//("," data+=Data)*
-		public Group getGroup_5_3() { return cGroup_5_3; }
-		
-		//","
-		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
-		
-		//data+=Data
-		public Assignment getDataAssignment_5_3_1() { return cDataAssignment_5_3_1; }
-		
-		//Data
-		public RuleCall getDataDataParserRuleCall_5_3_1_0() { return cDataDataParserRuleCall_5_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
-		
-		//('software' software=RunningSoftware)?
-		public Group getGroup_6() { return cGroup_6; }
-		
-		//'software'
-		public Keyword getSoftwareKeyword_6_0() { return cSoftwareKeyword_6_0; }
+		public RuleCall getDataDataParserRuleCall_4_1_1_1_0() { return cDataDataParserRuleCall_4_1_1_1_0; }
 		
 		//software=RunningSoftware
-		public Assignment getSoftwareAssignment_6_1() { return cSoftwareAssignment_6_1; }
+		public Assignment getSoftwareAssignment_4_1_1_2() { return cSoftwareAssignment_4_1_1_2; }
 		
 		//RunningSoftware
-		public RuleCall getSoftwareRunningSoftwareParserRuleCall_6_1_0() { return cSoftwareRunningSoftwareParserRuleCall_6_1_0; }
-		
-		//('sts' sts=STS)?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//'sts'
-		public Keyword getStsKeyword_7_0() { return cStsKeyword_7_0; }
+		public RuleCall getSoftwareRunningSoftwareParserRuleCall_4_1_1_2_0() { return cSoftwareRunningSoftwareParserRuleCall_4_1_1_2_0; }
 		
 		//sts=STS
-		public Assignment getStsAssignment_7_1() { return cStsAssignment_7_1; }
+		public Assignment getStsAssignment_4_1_1_3() { return cStsAssignment_4_1_1_3; }
 		
 		//STS
-		public RuleCall getStsSTSParserRuleCall_7_1_0() { return cStsSTSParserRuleCall_7_1_0; }
-		
-		//('relation' '{' modarelation+=MODARelation ("," modarelation+=MODARelation)* '}')?
-		public Group getGroup_8() { return cGroup_8; }
-		
-		//'relation'
-		public Keyword getRelationKeyword_8_0() { return cRelationKeyword_8_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_8_1() { return cLeftCurlyBracketKeyword_8_1; }
+		public RuleCall getStsSTSParserRuleCall_4_1_1_3_0() { return cStsSTSParserRuleCall_4_1_1_3_0; }
 		
 		//modarelation+=MODARelation
-		public Assignment getModarelationAssignment_8_2() { return cModarelationAssignment_8_2; }
+		public Assignment getModarelationAssignment_4_1_1_4() { return cModarelationAssignment_4_1_1_4; }
 		
 		//MODARelation
-		public RuleCall getModarelationMODARelationParserRuleCall_8_2_0() { return cModarelationMODARelationParserRuleCall_8_2_0; }
-		
-		//("," modarelation+=MODARelation)*
-		public Group getGroup_8_3() { return cGroup_8_3; }
-		
-		//","
-		public Keyword getCommaKeyword_8_3_0() { return cCommaKeyword_8_3_0; }
-		
-		//modarelation+=MODARelation
-		public Assignment getModarelationAssignment_8_3_1() { return cModarelationAssignment_8_3_1; }
-		
-		//MODARelation
-		public RuleCall getModarelationMODARelationParserRuleCall_8_3_1_0() { return cModarelationMODARelationParserRuleCall_8_3_1_0; }
+		public RuleCall getModarelationMODARelationParserRuleCall_4_1_1_4_0() { return cModarelationMODARelationParserRuleCall_4_1_1_4_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8_4() { return cRightCurlyBracketKeyword_8_4; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class MODAElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.diverse.moda.Moda.MODAElement");
@@ -256,224 +165,232 @@ public class ModaGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.diverse.moda.Moda.Model");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cModelAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cKindAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cKindModelKindEnumRuleCall_2_0 = (RuleCall)cKindAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cQuotationMarkKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cDescriptionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cDescriptionEStringParserRuleCall_3_1_0 = (RuleCall)cDescriptionAssignment_3_1.eContents().get(0);
-		private final Keyword cQuotationMarkKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Keyword cModelKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Assignment cKindAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cKindModelKindEnumRuleCall_3_0 = (RuleCall)cKindAssignment_3.eContents().get(0);
+		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDescriptionEStringParserRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
 		
 		//Model:
-		//	{Model} name=EString kind=ModelKind ('"' description=EString '"')?// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
+		//	{Model}
+		//	'model'
+		//	name=EString kind=ModelKind description=EString?// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 		//// ('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Model} name=EString kind=ModelKind ('"' description=EString '"')?
+		//{Model}
+		//'model'
+		//name=EString kind=ModelKind description=EString?
 		public Group getGroup() { return cGroup; }
 		
 		//{Model}
 		public Action getModelAction_0() { return cModelAction_0; }
 		
+		//'model'
+		public Keyword getModelKeyword_1() { return cModelKeyword_1; }
+		
 		//name=EString
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
-		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 		
 		//kind=ModelKind
-		public Assignment getKindAssignment_2() { return cKindAssignment_2; }
+		public Assignment getKindAssignment_3() { return cKindAssignment_3; }
 		
 		//ModelKind
-		public RuleCall getKindModelKindEnumRuleCall_2_0() { return cKindModelKindEnumRuleCall_2_0; }
+		public RuleCall getKindModelKindEnumRuleCall_3_0() { return cKindModelKindEnumRuleCall_3_0; }
 		
-		//('"' description=EString '"')?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'"'
-		public Keyword getQuotationMarkKeyword_3_0() { return cQuotationMarkKeyword_3_0; }
-		
-		//description=EString
-		public Assignment getDescriptionAssignment_3_1() { return cDescriptionAssignment_3_1; }
+		//description=EString?
+		public Assignment getDescriptionAssignment_4() { return cDescriptionAssignment_4; }
 		
 		//EString
-		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
-		
-		//'"'
-		public Keyword getQuotationMarkKeyword_3_2() { return cQuotationMarkKeyword_3_2; }
+		public RuleCall getDescriptionEStringParserRuleCall_4_0() { return cDescriptionEStringParserRuleCall_4_0; }
 	}
 	public class DataElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.diverse.moda.Moda.Data");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cDataAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cKindAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cKindDataKindEnumRuleCall_2_0 = (RuleCall)cKindAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cQuotationMarkKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cDescriptionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cDescriptionEStringParserRuleCall_3_1_0 = (RuleCall)cDescriptionAssignment_3_1.eContents().get(0);
-		private final Keyword cQuotationMarkKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Keyword cDataKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Assignment cKindAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cKindDataKindEnumRuleCall_3_0 = (RuleCall)cKindAssignment_3.eContents().get(0);
+		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDescriptionEStringParserRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
 		
 		//Data:
-		//	{Data} name=EString kind=DataKind ('"' description=EString '"')?// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
+		//	{Data}
+		//	'data'
+		//	name=EString kind=DataKind description=EString?// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 		//// ('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Data} name=EString kind=DataKind ('"' description=EString '"')?
+		//{Data}
+		//'data'
+		//name=EString kind=DataKind description=EString?
 		public Group getGroup() { return cGroup; }
 		
 		//{Data}
 		public Action getDataAction_0() { return cDataAction_0; }
 		
+		//'data'
+		public Keyword getDataKeyword_1() { return cDataKeyword_1; }
+		
 		//name=EString
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
-		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 		
 		//kind=DataKind
-		public Assignment getKindAssignment_2() { return cKindAssignment_2; }
+		public Assignment getKindAssignment_3() { return cKindAssignment_3; }
 		
 		//DataKind
-		public RuleCall getKindDataKindEnumRuleCall_2_0() { return cKindDataKindEnumRuleCall_2_0; }
+		public RuleCall getKindDataKindEnumRuleCall_3_0() { return cKindDataKindEnumRuleCall_3_0; }
 		
-		//('"' description=EString '"')?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'"'
-		public Keyword getQuotationMarkKeyword_3_0() { return cQuotationMarkKeyword_3_0; }
-		
-		//description=EString
-		public Assignment getDescriptionAssignment_3_1() { return cDescriptionAssignment_3_1; }
+		//description=EString?
+		public Assignment getDescriptionAssignment_4() { return cDescriptionAssignment_4; }
 		
 		//EString
-		public RuleCall getDescriptionEStringParserRuleCall_3_1_0() { return cDescriptionEStringParserRuleCall_3_1_0; }
-		
-		//'"'
-		public Keyword getQuotationMarkKeyword_3_2() { return cQuotationMarkKeyword_3_2; }
+		public RuleCall getDescriptionEStringParserRuleCall_4_0() { return cDescriptionEStringParserRuleCall_4_0; }
 	}
 	public class RunningSoftwareElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.diverse.moda.Moda.RunningSoftware");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cRunningSoftwareAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSoftwareKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
 		//RunningSoftware:
-		//	{RunningSoftware} name=EString// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
+		//	{RunningSoftware}
+		//	'software'
+		//	name=EString// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 		//// ('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{RunningSoftware} name=EString
+		//{RunningSoftware}
+		//'software'
+		//name=EString
 		public Group getGroup() { return cGroup; }
 		
 		//{RunningSoftware}
 		public Action getRunningSoftwareAction_0() { return cRunningSoftwareAction_0; }
 		
+		//'software'
+		public Keyword getSoftwareKeyword_1() { return cSoftwareKeyword_1; }
+		
 		//name=EString
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
-		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 	}
 	public class STSElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.diverse.moda.Moda.STS");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cSTSAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cStsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
 		//STS:
-		//	{STS} name=EString// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
+		//	{STS}
+		//	'sts'
+		//	name=EString// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 		//// ('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{STS} name=EString
+		//{STS}
+		//'sts'
+		//name=EString
 		public Group getGroup() { return cGroup; }
 		
 		//{STS}
 		public Action getSTSAction_0() { return cSTSAction_0; }
 		
+		//'sts'
+		public Keyword getStsKeyword_1() { return cStsKeyword_1; }
+		
 		//name=EString
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
-		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 	}
 	public class MODARelationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.diverse.moda.Moda.MODARelation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cMODARelationAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cKindAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cKindRelationKindEnumRuleCall_2_0 = (RuleCall)cKindAssignment_2.eContents().get(0);
-		private final Assignment cSrcAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cSrcMODAElementCrossReference_3_0 = (CrossReference)cSrcAssignment_3.eContents().get(0);
-		private final RuleCall cSrcMODAElementEStringParserRuleCall_3_0_1 = (RuleCall)cSrcMODAElementCrossReference_3_0.eContents().get(1);
-		private final Keyword cHyphenMinusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cTgtKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cTgtAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final CrossReference cTgtMODAElementCrossReference_5_1_0 = (CrossReference)cTgtAssignment_5_1.eContents().get(0);
-		private final RuleCall cTgtMODAElementEStringParserRuleCall_5_1_0_1 = (RuleCall)cTgtMODAElementCrossReference_5_1_0.eContents().get(1);
+		private final Keyword cRelationKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Assignment cKindAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cKindRelationKindEnumRuleCall_3_0 = (RuleCall)cKindAssignment_3.eContents().get(0);
+		private final Assignment cSrcAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cSrcMODAElementCrossReference_4_0 = (CrossReference)cSrcAssignment_4.eContents().get(0);
+		private final RuleCall cSrcMODAElementEStringParserRuleCall_4_0_1 = (RuleCall)cSrcMODAElementCrossReference_4_0.eContents().get(1);
+		private final Keyword cHyphenMinusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cTgtAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final CrossReference cTgtMODAElementCrossReference_6_0 = (CrossReference)cTgtAssignment_6.eContents().get(0);
+		private final RuleCall cTgtMODAElementEStringParserRuleCall_6_0_1 = (RuleCall)cTgtMODAElementCrossReference_6_0.eContents().get(1);
 		
 		//MODARelation:
-		//	{MODARelation} name=EString kind=RelationKind src=[MODAElement|EString] '->' ('tgt' tgt=[MODAElement|EString]);
+		//	{MODARelation}
+		//	'relation'
+		//	name=EString kind=RelationKind src=[MODAElement|EString] '->' tgt=[MODAElement|EString];
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{MODARelation} name=EString kind=RelationKind src=[MODAElement|EString] '->' ('tgt' tgt=[MODAElement|EString])
+		//{MODARelation}
+		//'relation'
+		//name=EString kind=RelationKind src=[MODAElement|EString] '->' tgt=[MODAElement|EString]
 		public Group getGroup() { return cGroup; }
 		
 		//{MODARelation}
 		public Action getMODARelationAction_0() { return cMODARelationAction_0; }
 		
+		//'relation'
+		public Keyword getRelationKeyword_1() { return cRelationKeyword_1; }
+		
 		//name=EString
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//EString
-		public RuleCall getNameEStringParserRuleCall_1_0() { return cNameEStringParserRuleCall_1_0; }
+		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 		
 		//kind=RelationKind
-		public Assignment getKindAssignment_2() { return cKindAssignment_2; }
+		public Assignment getKindAssignment_3() { return cKindAssignment_3; }
 		
 		//RelationKind
-		public RuleCall getKindRelationKindEnumRuleCall_2_0() { return cKindRelationKindEnumRuleCall_2_0; }
+		public RuleCall getKindRelationKindEnumRuleCall_3_0() { return cKindRelationKindEnumRuleCall_3_0; }
 		
 		//src=[MODAElement|EString]
-		public Assignment getSrcAssignment_3() { return cSrcAssignment_3; }
+		public Assignment getSrcAssignment_4() { return cSrcAssignment_4; }
 		
 		//[MODAElement|EString]
-		public CrossReference getSrcMODAElementCrossReference_3_0() { return cSrcMODAElementCrossReference_3_0; }
+		public CrossReference getSrcMODAElementCrossReference_4_0() { return cSrcMODAElementCrossReference_4_0; }
 		
 		//EString
-		public RuleCall getSrcMODAElementEStringParserRuleCall_3_0_1() { return cSrcMODAElementEStringParserRuleCall_3_0_1; }
+		public RuleCall getSrcMODAElementEStringParserRuleCall_4_0_1() { return cSrcMODAElementEStringParserRuleCall_4_0_1; }
 		
 		//'->'
-		public Keyword getHyphenMinusGreaterThanSignKeyword_4() { return cHyphenMinusGreaterThanSignKeyword_4; }
-		
-		//('tgt' tgt=[MODAElement|EString])
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'tgt'
-		public Keyword getTgtKeyword_5_0() { return cTgtKeyword_5_0; }
+		public Keyword getHyphenMinusGreaterThanSignKeyword_5() { return cHyphenMinusGreaterThanSignKeyword_5; }
 		
 		//tgt=[MODAElement|EString]
-		public Assignment getTgtAssignment_5_1() { return cTgtAssignment_5_1; }
+		public Assignment getTgtAssignment_6() { return cTgtAssignment_6; }
 		
 		//[MODAElement|EString]
-		public CrossReference getTgtMODAElementCrossReference_5_1_0() { return cTgtMODAElementCrossReference_5_1_0; }
+		public CrossReference getTgtMODAElementCrossReference_6_0() { return cTgtMODAElementCrossReference_6_0; }
 		
 		//EString
-		public RuleCall getTgtMODAElementEStringParserRuleCall_5_1_0_1() { return cTgtMODAElementEStringParserRuleCall_5_1_0_1; }
+		public RuleCall getTgtMODAElementEStringParserRuleCall_6_0_1() { return cTgtMODAElementEStringParserRuleCall_6_0_1; }
 	}
 	public class EStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.diverse.moda.Moda.EString");
@@ -732,9 +649,8 @@ public class ModaGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	//	{MODAModel}
 	//	'MODAModel'
 	//	name=EString
-	//	'{' ('model' '{' model+=Model ("," model+=Model)* '}')? ('data' '{' data+=Data ("," data+=Data)* '}')? ('software'
-	//	software=RunningSoftware)? ('sts' sts=STS)? ('relation' '{' modarelation+=MODARelation ("," modarelation+=MODARelation
-	//	)* '}')?
+	//	'{' (model+=Model ("," (model+=Model | data+=Data | software=RunningSoftware | sts=STS | modarelation+=MODARelation))*
+	//	)?
 	//	'}';
 	public MODAModelElements getMODAModelAccess() {
 		return pMODAModel;
@@ -755,7 +671,9 @@ public class ModaGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	}
 	
 	//Model:
-	//	{Model} name=EString kind=ModelKind ('"' description=EString '"')?// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
+	//	{Model}
+	//	'model'
+	//	name=EString kind=ModelKind description=EString?// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 	//// ('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
 	//;
 	public ModelElements getModelAccess() {
@@ -767,7 +685,9 @@ public class ModaGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	}
 	
 	//Data:
-	//	{Data} name=EString kind=DataKind ('"' description=EString '"')?// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
+	//	{Data}
+	//	'data'
+	//	name=EString kind=DataKind description=EString?// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 	//// ('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
 	//;
 	public DataElements getDataAccess() {
@@ -779,7 +699,9 @@ public class ModaGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	}
 	
 	//RunningSoftware:
-	//	{RunningSoftware} name=EString// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
+	//	{RunningSoftware}
+	//	'software'
+	//	name=EString// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 	//// ('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
 	//;
 	public RunningSoftwareElements getRunningSoftwareAccess() {
@@ -791,7 +713,9 @@ public class ModaGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	}
 	
 	//STS:
-	//	{STS} name=EString// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
+	//	{STS}
+	//	'sts'
+	//	name=EString// ('outgoing' '(' outgoing+=[MODARelation|EString] ( "," outgoing+=[MODARelation|EString])* ')' )?
 	//// ('incoming' '(' incoming+=[MODARelation|EString] ( "," incoming+=[MODARelation|EString])* ')' )?
 	//;
 	public STSElements getSTSAccess() {
@@ -803,7 +727,9 @@ public class ModaGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	}
 	
 	//MODARelation:
-	//	{MODARelation} name=EString kind=RelationKind src=[MODAElement|EString] '->' ('tgt' tgt=[MODAElement|EString]);
+	//	{MODARelation}
+	//	'relation'
+	//	name=EString kind=RelationKind src=[MODAElement|EString] '->' tgt=[MODAElement|EString];
 	public MODARelationElements getMODARelationAccess() {
 		return pMODARelation;
 	}

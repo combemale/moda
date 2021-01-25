@@ -1,6 +1,5 @@
-'"'=35
-','=30
-'->'=36
+','=29
+'->'=35
 'MODAModel'=26
 'analysis'=25
 'data'=31
@@ -13,7 +12,7 @@
 'input'=14
 'measured'=17
 'measurement'=21
-'model'=29
+'model'=30
 'otherInterplay'=22
 'output'=15
 'predictive'=12
@@ -22,7 +21,6 @@
 'relation'=34
 'software'=32
 'sts'=33
-'tgt'=37
 '{'=27
 '}'=28
 RULE_ANY_OTHER=10
@@ -57,5 +55,3 @@ T__32=32
 T__33=33
 T__34=34
 T__35=35
-T__36=36
-T__37=37
